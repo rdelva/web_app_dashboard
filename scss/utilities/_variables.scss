@@ -1,7 +1,7 @@
 //Font Stacks
 
 $font-url--google			: 'https://fonts.googleapis.com/css?family=Open+Sans:400,800';
-$primary-font-stack			: 'font-family: 'Open Sans', sans-serif;'
+$primary-font-stack			: 'font-family: 'Open Sans', sans-serif';
 
 
 // Text
@@ -17,3 +17,36 @@ $light-purple				:#7377bf;
 $grey-purple				:#b2b2b2;
 $green						:#81c98f;
 
+
+//Breakpoints
+$brkpoint-xs				: 1px;	
+$brkpoint-sm				: 480px;							
+$brkpoint-m					: 768px;
+$brkpoint-lg				: 1400px;	
+
+
+//UI Colors
+
+$ui-colors: (
+	default					: $purple,
+	cancel					: $grey-purple,
+	
+);
+
+
+
+//Grid
+
+$g-col-width				: 65px;
+$g-gutter-width				: 20px;
+$g-col-count				: 12;
+$g-cont-max-w				: 1050px;
+
+//Border-Radius
+
+$br    						: 5px;
+
+//Layout 
+
+$gutter 					: 10px;
+$max-width					: $brkpoint-lg;
