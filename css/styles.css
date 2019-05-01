@@ -342,10 +342,7 @@ body {
 ul {
   list-style-type: none;
   margin: 0px;
-}
-
-nav img, header img {
-  width: 20px;
+  padding: 0px;
 }
 
 header {
@@ -360,6 +357,24 @@ header {
 nav {
   background-color: #4d4c72;
   color: #fff;
+}
+nav li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+nav li a:hover {
+  text-decoration: none;
+  background-color: #b2b2b2;
+}
+
+header img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+ul img {
+  width: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

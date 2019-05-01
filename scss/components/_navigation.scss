@@ -9,4 +9,19 @@ header {
 nav {
 	background-color:$twilight-purple;
 	color:$white;
+		li {
+
+			a {
+				display: block;
+				color: $white;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: none;
+					background-color: $grey-purple;
+				}
+			}
+		}
+	
 }
+
