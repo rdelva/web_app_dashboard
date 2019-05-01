@@ -1,7 +1,8 @@
 //Font Stacks
 
-$font-url--google			: 'https://fonts.googleapis.com/css?family=Open+Sans:400,800';
-$primary-font-stack			: 'font-family: 'Open Sans', sans-serif';
+$font-url--google			: 'https://fonts.googleapis.com/css?family=Open+Sans';
+$primary-font-stack			: 'Open Sans', sans-serif;
+
 
 
 // Text
@@ -12,10 +13,11 @@ $base__line      			: 24px;
 
 //Colors
 
-$faded-indigo				:#7477bf;
 $twilight-purple			:#4d4c72;
+$faded-indigo				:#7477bf;
 $grey-purple				:#b2b2b2;
 $green						:#81c98f;
+$black						:#676666;
 $white						:#fff;
 
 
@@ -29,7 +31,7 @@ $brkpoint-lg				: 1400px;
 //UI Colors
 
 $ui-colors: (
-	default					: $purple,
+	default					: $twilight-purple,
 	cancel					: $grey-purple,
 	
 );

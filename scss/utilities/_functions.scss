@@ -1,0 +1,44 @@
+//Import if Google Fonts URL is defined
+
+@if variable-exists(font-url--google) {
+	@import url($font-url--google);
+}
+
+
+//Calculate em values
+
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}
+
+@function px-to-pc ($target, $context: $max-width) {
+
+	@return ($target / $context) * 100%;	
+}
+
+@function per-line ($items) {
+	
+	$g-pct: px-to-pc($gutter) * 2;
+	$g-total: $items * $g-pct;
+	@return (100 / $items) - $g-total;
+}
+
+
+
+//Finding Line Height
+
+@function line-height($base__line , $base__font-size) {
+	@return ($base__line / $base__font-size);
+}
+
+
+
+
+
+
+// Set the "context" width for the grid
+    
+@function g-context($g-col-width, $g-col-count , $g-gutter-width) {
+  $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+  @return $g-context;
+}

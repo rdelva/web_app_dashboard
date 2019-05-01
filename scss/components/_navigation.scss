@@ -1,4 +1,12 @@
 header {
-	background-color: $twilight-purple;
+	background-color: $faded-indigo;
+	color:$white;
+	@include flexBox(flex, row, wrap);
+	justify-content: space-between;
+
+}
+
+nav {
+	background-color:$twilight-purple;
 	color:$white;
 }
