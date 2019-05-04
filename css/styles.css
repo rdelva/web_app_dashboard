@@ -345,9 +345,14 @@ ul {
   padding: 0px;
 }
 
+h1 {
+  font-size: 1em;
+}
+
 header {
   background-color: #7477bf;
   color: #fff;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -358,6 +363,10 @@ header {
   display: none;
 }
 
+.title {
+  padding-top: 30px;
+}
+
 nav {
   background-color: #4d4c72;
   color: #fff;
@@ -366,6 +375,7 @@ nav li a {
   display: block;
   color: #fff;
   text-decoration: none;
+  padding: 10px 5px;
 }
 nav li a:hover {
   text-decoration: none;

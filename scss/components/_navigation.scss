@@ -1,8 +1,9 @@
 header {
 	background-color: $faded-indigo;
 	color: $white;
+	padding:10px;
 	@include flexBox(flex, row, wrap);
-	/*justify-content: space-between;*/
+	justify-content: space-between;
 
 }
 
@@ -25,6 +26,8 @@ nav {
 				display: block;
 				color: $white;
 				text-decoration: none;
+				padding: 10px 5px;
+
 
 				&:hover {
 					text-decoration: none;
