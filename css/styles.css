@@ -354,6 +354,10 @@ header {
   justify-content: space-between;
 }
 
+.name {
+  display: none;
+}
+
 nav {
   background-color: #4d4c72;
   color: #fff;
@@ -368,9 +372,13 @@ nav li a:hover {
   background-color: #b2b2b2;
 }
 
-header img {
-  width: 50px;
+.members {
+  width: 40px;
   border-radius: 50%;
+}
+
+.bell {
+  width: 30px;
 }
 
 ul img {

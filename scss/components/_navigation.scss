@@ -1,10 +1,20 @@
 header {
 	background-color: $faded-indigo;
-	color:$white;
+	color: $white;
 	@include flexBox(flex, row, wrap);
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 
 }
+
+.name {
+	display: none;
+}
+
+.title {
+	padding-top: 30px;
+	
+}
+
 
 nav {
 	background-color:$twilight-purple;
