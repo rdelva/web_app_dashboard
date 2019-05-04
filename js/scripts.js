@@ -1,9 +1,11 @@
-	const menu  = document.querySelector("nav ul");
 
-
+//Navigation Menu
+const menu  = document.querySelector("nav ul");
+$(menu).hide();
 $(".menu-btn").click( function(){
-	console.log(menu);
-
+	
+	$(menu).slideToggle();
+	
 });
 
 	
