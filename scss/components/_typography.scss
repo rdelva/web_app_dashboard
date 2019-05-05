@@ -1,7 +1,12 @@
 h1 {
 	margin:0px;
+	font-size: 1.5em;
+	color: $grey-black;
+}
+
+h2 {
 	font-size: 1em;
 	color: $grey-black;
-
-
+	text-transform: uppercase;
+	padding: 10px;
 }

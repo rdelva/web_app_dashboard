@@ -358,8 +358,15 @@ ul {
 
 h1 {
   margin: 0px;
+  font-size: 1.5em;
+  color: #676666;
+}
+
+h2 {
   font-size: 1em;
   color: #676666;
+  text-transform: uppercase;
+  padding: 10px;
 }
 
 header {
@@ -406,6 +413,22 @@ nav li a:hover {
 
 ul img {
   width: 20px;
+}
+
+.alert {
+  background-color: #7477bf;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  font-size: 0.75em;
+  border-radius: 5px;
+}
+.alert a:link {
+  color: #fff;
+  text-decoration: none;
+}
+.alert a:link:hover {
+  text-decoration: none;
 }
 
 .dashboard input {
