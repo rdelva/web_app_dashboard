@@ -4,24 +4,16 @@
 
 		div {
 
-			& h1 {
-				border-right: solid 1px $faded-indigo;
+		
 				padding: 10px 10px 5px 10px;
 				display: inline-block;
-
-			}
-
-		&:nth-child(2){
-								
-				border-bottom: solid 1px $faded-indigo;
-				width: 100%;
-				display: inline-block;
-			}
+				order:2;
+			
 		}
 		
 }
 
 
 [class^="grid__col--"] {
-	
+
 }

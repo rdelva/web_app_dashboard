@@ -350,15 +350,15 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.dashboard div h1 {
-  border-right: solid 1px #7477bf;
+.dashboard div {
   padding: 10px 10px 5px 10px;
   display: inline-block;
+  order: 2;
 }
 .dashboard div:nth-child(2) {
-  border-bottom: solid 1px #7477bf;
   width: 100%;
   display: inline-block;
+  order: 1;
 }
 
 h1 {
@@ -410,6 +410,10 @@ nav li a:hover {
 
 ul img {
   width: 20px;
+}
+
+.dashboard input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
