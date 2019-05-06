@@ -356,6 +356,37 @@ ul {
   order: 2;
 }
 
+.alert {
+  background-color: #7477bf;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  font-size: 0.75em;
+  border-radius: 5px;
+}
+.alert a:link {
+  color: #fff;
+  text-decoration: none;
+}
+.alert a:link:hover {
+  text-decoration: none;
+}
+
+.time ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-between;
+  font-size: 0.75em;
+}
+.time ul li:hover {
+  background-color: #81c98f;
+  border-radius: 10px;
+  padding: 0.25em;
+  color: #fff;
+}
+
 h1 {
   margin: 0px;
   font-size: 1.5em;
@@ -413,37 +444,6 @@ nav li a:hover {
 
 ul img {
   width: 20px;
-}
-
-.alert {
-  background-color: #7477bf;
-  color: #fff;
-  padding: 10px;
-  margin: 10px;
-  font-size: 0.75em;
-  border-radius: 5px;
-}
-.alert a:link {
-  color: #fff;
-  text-decoration: none;
-}
-.alert a:link:hover {
-  text-decoration: none;
-}
-
-.time ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
-  justify-content: space-between;
-  font-size: 0.75em;
-}
-.time ul li:hover {
-  background-color: #81c98f;
-  border-radius: 10px;
-  padding: 0.25em;
-  color: #fff;
 }
 
 .dashboard input {

@@ -1,13 +1,54 @@
-.members{
-	width:40px;
-	border-radius: 50%;
+.dashboard {
+		@include flexBox(flex, row, wrap);
+		
+
+		div {
+
+		
+				padding: 10px 10px 5px 10px;
+				display: inline-block;
+				order:2;
+			
+		}
+		
+}
+
+
+.alert {
+	background-color: $faded-indigo;
+	color: $white;
+	padding:10px;
+	margin:10px;
+	font-size: .75em;
+	border-radius: 5px;
+
+	a:link {
+		color: $white;
+		text-decoration:none;
+
+		&:hover {
+			text-decoration:none;
+		}
+	}
 
 }
 
-.bell {
-	width:30px;
+.time {
+	ul {
+		@include flexBox(flex, row, wrap);
+		padding: 10px;	
+		justify-content: space-between;
+		font-size:.75em;
+
+		li:hover{
+
+			background-color: $green;
+			border-radius: 10px;
+			padding: .25em;
+			color: $white;
+		}
+	}
+
+
 }
 
-ul img {
-	width:20px;
-}
