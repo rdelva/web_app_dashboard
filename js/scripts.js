@@ -9,7 +9,7 @@ $(".menu-btn").click( function(){
 });
 
 
-var ctx = document.getElementById('traffic_chart');
+var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
