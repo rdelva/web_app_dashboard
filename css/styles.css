@@ -387,6 +387,16 @@ ul {
   color: #fff;
 }
 
+.social li {
+  margin: 10px;
+  padding: 10px;
+}
+.social span:nth-child(2) {
+  color: #676666;
+  font-size: 2em;
+  font-weight: normal;
+}
+
 h1 {
   margin: 0px;
   font-size: 1.5em;
@@ -444,6 +454,23 @@ nav li a:hover {
 
 ul img {
   width: 20px;
+}
+
+.social span:nth-child(1) {
+  background-color: #7477bf;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.social span:nth-child(1) img {
+  width: 50px;
+  margin: 0 auto;
+}
+.social li {
+  color: #7477bf;
+  font-weight: bold;
+  border: solid 1px #7477bf;
 }
 
 .dashboard input {
