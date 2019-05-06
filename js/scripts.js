@@ -9,7 +9,8 @@ $(".menu-btn").click( function(){
 });
 
 
-var ctx = document.getElementById('trafficChart');
+function traffic(){
+	var ctx = document.getElementById('trafficChart');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -50,6 +51,7 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+}
 
 
 function dailyTraffic (){
@@ -57,7 +59,51 @@ function dailyTraffic (){
 
 	var ctx = document.getElementById('dailyTraffic');
 	var myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
+    data: {
+        labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+        datasets: [{
+                   
+            backgroundColor : 'rgba(116, 119, 191, 1)',
+
+            data: [65, 100, 165, 135, 235, 200, 100],
+            borderColor: [
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+
+    options: {
+
+
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+}
+
+function mobileUsers() {
+	var ctx = document.getElementById('mobileChart');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
     data: {
         labels: ['16-22', '23-29', '30-5', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
         datasets: [{
@@ -96,7 +142,8 @@ function dailyTraffic (){
         }
     }
 });
-
 }
 
+traffic();
 dailyTraffic();
+mobileUsers();
