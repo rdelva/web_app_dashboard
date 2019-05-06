@@ -13,8 +13,26 @@
 		&:hover {
 			text-decoration:none;
 		}
+	}
 
+}
+
+.time {
+	ul {
+		@include flexBox(flex, row, wrap);
+		padding: 10px;	
+		justify-content: space-between;
+		font-size:.75em;
+
+		li:hover{
+
+			background-color: $green;
+			border-radius: 10px;
+			padding: .25em;
+			color: $white;
+		}
 	}
 
 
 }
+
