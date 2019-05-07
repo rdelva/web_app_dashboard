@@ -1,3 +1,15 @@
+.icons	 {
+	display:none;
+}
+
+/*#icon{
+	&-facebook {
+		color: $white;
+		fill: currentColor;
+	}
+
+}
+*/
 .members{
 	width:40px;
 	border-radius: 50%;
@@ -12,30 +24,3 @@ ul img {
 	width:20px;
 }
 
-.social {
-
-	
-	span:nth-child(1)  {
-			background-color:$faded-indigo;	
-			width:100px;
-			height:100px; 
-			display: inline-block;		
-			border-radius: 50%;
-		
-		img {
-			
-			width:50px;
-			margin: 0 auto;
-		
-		}
-
-	}
-
-
-
-	li {
-		color: $faded-indigo;
-		font-weight:bold;
-		border: solid 1px $faded-indigo;
-	}
-}

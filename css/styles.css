@@ -443,6 +443,18 @@ nav li a:hover {
   background-color: #b2b2b2;
 }
 
+.icons {
+  display: none;
+}
+
+/*#icon{
+	&-facebook {
+		color: $white;
+		fill: currentColor;
+	}
+
+}
+*/
 .members {
   width: 40px;
   border-radius: 50%;
@@ -454,23 +466,6 @@ nav li a:hover {
 
 ul img {
   width: 20px;
-}
-
-.social span:nth-child(1) {
-  background-color: #7477bf;
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  border-radius: 50%;
-}
-.social span:nth-child(1) img {
-  width: 50px;
-  margin: 0 auto;
-}
-.social li {
-  color: #7477bf;
-  font-weight: bold;
-  border: solid 1px #7477bf;
 }
 
 .dashboard input {
