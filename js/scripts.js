@@ -60,6 +60,7 @@ function dailyTraffic (){
 	var ctx = document.getElementById('dailyTraffic');
 	var myChart = new Chart(ctx, {
     type: 'bar',
+     display: false,
     data: {
         labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [{
@@ -104,11 +105,16 @@ function mobileUsers() {
 	var ctx = document.getElementById('mobileChart');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
+    position: 'right',
     data: {
         labels: ['Phone', 'Tablets', 'Desktop'],
         datasets: [{
                    	
-            backgroundColor : 'rgba(116, 119, 191, .2)',             
+            backgroundColor : [
+           		'rgba(129, 201, 143, 1)',
+            	'rgba(116, 177, 191, 1)',
+            	 'rgba(116, 119, 191, 1)',
+            ],             
             data: [15, 10, 75],
             borderColor: [
                'rgba(116, 119, 191, 1)',
