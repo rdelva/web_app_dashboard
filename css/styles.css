@@ -519,4 +519,12 @@ li svg {
   padding: 10px;
 }
 
+fieldset {
+  border: none;
+}
+fieldset label {
+  font-size: 0.75em;
+  color: #676666;
+}
+
 /*# sourceMappingURL=styles.css.map */
