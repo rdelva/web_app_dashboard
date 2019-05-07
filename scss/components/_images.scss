@@ -1,13 +1,20 @@
 .icons {
 	display:none;
 }
-/*
+
 #icon {
 	&-twitter {
 		color:$white;
 		fill: currentColor;
 	} 
-}*/
+}
+
+.iconColor {
+	color:#ffffff;
+	fill: currentColor;
+	
+}
+
 .members{
 	width:40px;
 	border-radius: 50%;
@@ -23,17 +30,14 @@ ul img {
 }
 
 li svg {
-	background-color: $faded-indigo;
+	background-color: $twilight-purple;
 	border-radius:50%;
 	width: 80px;
 	height: 80px;
 }
 svg {
 	
-	display:block;
-	background-color: $faded-indigo;
-	border-radius:50%;
-	width:100px;
+
 	
 
 }

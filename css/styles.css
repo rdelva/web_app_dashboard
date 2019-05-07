@@ -447,13 +447,16 @@ nav li a:hover {
   display: none;
 }
 
-/*
-#icon {
-	&-twitter {
-		color:$white;
-		fill: currentColor;
-	} 
-}*/
+#icon-twitter {
+  color: #fff;
+  fill: currentColor;
+}
+
+.iconColor {
+  color: #ffffff;
+  fill: currentColor;
+}
+
 .members {
   width: 40px;
   border-radius: 50%;
@@ -468,17 +471,10 @@ ul img {
 }
 
 li svg {
-  background-color: #7477bf;
+  background-color: #4d4c72;
   border-radius: 50%;
   width: 80px;
   height: 80px;
-}
-
-svg {
-  display: block;
-  background-color: #7477bf;
-  border-radius: 50%;
-  width: 100px;
 }
 
 .dashboard input {
