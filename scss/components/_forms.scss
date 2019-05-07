@@ -8,14 +8,35 @@
 }
 
 .message-form {
-	input {
+	[type='text'] {
 		display:block;
 		width:100%;
 		padding: 10px;
+		margin-bottom:20px;
+		font-size: .75em;
+		background-color: #fbfbfb;	
+		border-radius: 5px;
+		border:solid 1px $grey-purple;
 	}
 
 	textarea {
 		width: 100%;
 		padding: 10px;
+		font-size: .75em;
+		background-color: #fbfbfb;
+		border-radius: 5px;
+		margin-bottom:20px;
+
+
+	}
+
+	[type='submit'] {
+		background-color:$faded-indigo;
+		width:100%;
+		color: $white;
+		border:none;
+		border-radius: 5px;
+		padding:10px;
 	}
 }
+
