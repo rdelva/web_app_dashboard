@@ -485,4 +485,14 @@ li svg {
   width: 100%;
 }
 
+.message-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+.message-form textarea {
+  width: 100%;
+  padding: 10px;
+}
+
 /*# sourceMappingURL=styles.css.map */
