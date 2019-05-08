@@ -44,8 +44,23 @@ fieldset {
 	border: none;
 
 	label {
-		font-size:.75em;
+		
 		color:$grey-black;
+		font-size: .75em;
+		
+		/*@extends clearfix;
+
+		@includes flexBox(flex,row, wrap);*/
+
 	}
+
+}
+
+
+
+.switch-ios.switch-light > span {
+	display: inline-block;
+
+	width:30%;
 
 }

@@ -523,8 +523,16 @@ fieldset {
   border: none;
 }
 fieldset label {
-  font-size: 0.75em;
   color: #676666;
+  font-size: 0.75em;
+  /*@extends clearfix;
+  
+  		@includes flexBox(flex,row, wrap);*/
+}
+
+.switch-ios.switch-light > span {
+  display: inline-block;
+  width: 30%;
 }
 
 /*# sourceMappingURL=styles.css.map */
