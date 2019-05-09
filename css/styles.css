@@ -543,12 +543,9 @@ fieldset .settingLabel {
   font-size: 0.75em;
 }
 
-/*
 .switch-ios.switch-light > span {
-	display: inline-block;
-
-	width:30%;
-
-}*/
+  display: inline-block;
+  width: 30%;
+}
 
 /*# sourceMappingURL=styles.css.map */
