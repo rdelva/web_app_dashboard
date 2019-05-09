@@ -345,6 +345,10 @@ ul {
   padding: 0px;
 }
 
+.wrapper {
+  min-height: calc(100vh - 100px);
+}
+
 .dashboard {
   display: flex;
   flex-direction: row;
@@ -399,6 +403,10 @@ section {
   color: #676666;
   font-size: 2em;
   font-weight: normal;
+}
+
+footer {
+  height: 100px;
 }
 
 h1 {
