@@ -1,11 +1,4 @@
-.dashboard {
 
-	input {
-		width: 100%;
-		
-	}
-	
-}
 
 .message-form {
 	[type='text'] {
@@ -42,25 +35,38 @@
 
 fieldset {
 	border: none;
+	padding: 0px;
+
 
 	label {
 		
-		color:$grey-black;
+		color: $grey-black;
 		font-size: .75em;
-		
-		/*@extends clearfix;
+	}
 
-		@includes flexBox(flex,row, wrap);*/
+	select  {
+		color: $grey-black;
+		font-size: .75em;
+		padding: 10px;
+		margin: 10px 0;
+	
+	}
+
+	.settingLabel {
+		background-color: #fff;
+		box-shadow: inset 0 0 0 30px #fff; 
+		font-size:.75em;
+
 
 	}
 
 }
 
 
-
+/*
 .switch-ios.switch-light > span {
 	display: inline-block;
 
 	width:30%;
 
-}
+}*/
