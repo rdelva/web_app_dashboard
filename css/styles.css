@@ -545,6 +545,8 @@ fieldset .settingLabel {
 
 .switch-ios.switch-light > span {
   display: inline-block;
+  float: right;
+  margin-bottom: 10px;
   width: 30%;
 }
 
