@@ -58,15 +58,46 @@ section {
 .social {
 
 	li {
+		@extend %clearfix;
 		margin:10px;
 		padding: 10px;
+		border: solid black 1px;
 
+
+		svg {
+			float:left;	
+			@extend %clearfix;	
+		}
+
+		div{					
+
+			padding-left: 20px;	
+			display: inline-block;
+		}
+
+		span {
+			display: block;
+
+		}
+
+		span:first-child{
+			font-size:18px;
+			color:$faded-indigo;
+			font-weight: bold;
+		}
+
+		span:nth-child(2){
+			font-size:50px;
+			color: $grey-black;
+		}
 	}
 
 
-	span:nth-child(2) {
-		
-	}
+
+
+
+
+	
 }
 
 footer {

@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.social li svg:after, .social li:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 fieldset .btn--cancel, fieldset .btn--default {
   color: #fff;
   border: none;
@@ -407,7 +413,28 @@ section {
 .social li {
   margin: 10px;
   padding: 10px;
+  border: solid black 1px;
 }
+.social li svg {
+  float: left;
+}
+.social li div {
+  padding-left: 20px;
+  display: inline-block;
+}
+.social li span {
+  display: block;
+}
+.social li span:first-child {
+  font-size: 18px;
+  color: #7477bf;
+  font-weight: bold;
+}
+.social li span:nth-child(2) {
+  font-size: 50px;
+  color: #676666;
+}
+
 footer {
   height: 100px;
 }
