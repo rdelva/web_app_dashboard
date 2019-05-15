@@ -38,7 +38,7 @@
 
 @mixin ui-colors($map) {
 	@each $theme, $color in $map {
-		&--#{$theme}.theme__colors {
+		&--#{$theme} {
 			background-color: $color;
 			@content;
 			

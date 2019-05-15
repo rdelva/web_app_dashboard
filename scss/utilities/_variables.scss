@@ -33,10 +33,24 @@ $brkpoint-lg				: 1400px;
 $ui-colors: (
 	default					: $twilight-purple,
 	cancel					: $grey-purple,
-	
+		
 );
 
+//Grid
 
+$g-col-width				: 65px;
+$g-gutter-width				: 20px;
+$g-col-count				: 12;
+$g-cont-max-w				: 1050px;
+
+//Border-Radius
+
+$br    						: 5px;
+
+//Layout 
+
+$gutter 					: 10px;
+$max-width					: $brkpoint-lg;
 
 //Grid
 
