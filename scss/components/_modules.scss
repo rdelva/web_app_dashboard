@@ -110,6 +110,7 @@ footer {
 .members-new {
 
 	@extend %clearfix;
+	margin-bottom: 10px;
 
 	img {
 		float:left;
@@ -117,9 +118,8 @@ footer {
 		display: inline-block;
 	}
 
-	div	div{
-		float : right;
-		display: inline;
+	p{
+		margin-bottom:0px;
 	}
 
 }

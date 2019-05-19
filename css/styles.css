@@ -441,14 +441,16 @@ footer {
   height: 100px;
 }
 
+.members-new {
+  margin-bottom: 10px;
+}
 .members-new img {
   float: left;
   padding-left: 10px;
   display: inline-block;
 }
-.members-new div div {
-  float: right;
-  display: inline;
+.members-new p {
+  margin-bottom: 0px;
 }
 
 h1 {
@@ -519,8 +521,9 @@ nav li a:hover {
 }
 
 .members {
-  width: 40px;
   border-radius: 50%;
+  width: 60px;
+  padding-right: 10px;
 }
 
 .bell {
