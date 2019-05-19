@@ -30,9 +30,13 @@
 	font-size: em($fontSize);
 	color: $color;
 	font-weight: $weight;
+
+	@content;
 	
 
 }
+
+//
 
 // Generate modifier color classes
 

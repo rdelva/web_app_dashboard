@@ -49,7 +49,7 @@ fieldset {
 		font-size: .75em;
 		padding: 10px;
 		margin: 10px 0;
-	
+		width: 100%;	
 	}
 
 	.settingLabel {
@@ -58,11 +58,22 @@ fieldset {
 		font-size:.75em;
 	}
 
-	.btn {
+	.menu-buttons {
 
-		@include ui-colors($ui-colors) {
-			@extend %btn;
+		.btn {
+
+			@include ui-colors($ui-colors) {
+				@extend %btn;			
+				width: 45%;
+			}
 		}
+
+
+		@include flexBox(flex, row, wrap);
+
+		justify-content: space-between;
+
+
 	}
 
 }
