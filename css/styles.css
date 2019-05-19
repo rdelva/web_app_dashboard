@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-.social li svg:after, .social li:after {
+.members-new:after, .social li svg:after, .social li:after {
   content: "";
   display: table;
   clear: both;
@@ -414,9 +414,11 @@ section {
   margin: 10px;
   padding: 10px;
   border: solid black 1px;
+  color: #fff;
 }
 .social li svg {
   float: left;
+  fill: currentColor;
 }
 .social li div {
   padding-left: 20px;
@@ -437,6 +439,16 @@ section {
 
 footer {
   height: 100px;
+}
+
+.members-new img {
+  float: left;
+  padding-left: 10px;
+  display: inline-block;
+}
+.members-new div div {
+  float: right;
+  display: inline;
 }
 
 h1 {

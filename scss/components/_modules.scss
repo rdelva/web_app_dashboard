@@ -62,11 +62,13 @@ section {
 		margin:10px;
 		padding: 10px;
 		border: solid black 1px;
+		color: #fff;
 
 
 		svg {
-			float:left;	
-			@extend %clearfix;	
+			float: left;	
+			@extend %clearfix;
+			fill: currentColor;	
 		}
 
 		div{					
@@ -96,10 +98,28 @@ section {
 
 
 
-
 	
 }
 
 footer {
 	height: 100px;
+}
+
+
+
+.members-new {
+
+	@extend %clearfix;
+
+	img {
+		float:left;
+		padding-left: 10px;
+		display: inline-block;
+	}
+
+	div	div{
+		float : right;
+		display: inline;
+	}
+
 }
