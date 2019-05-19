@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-.members-new:after, .social li svg:after, .social li:after {
+.messages div:after, .members-new:after, .social li svg:after, .social li:after {
   content: "";
   display: table;
   clear: both;
@@ -450,6 +450,18 @@ footer {
   display: inline-block;
 }
 .members-new p {
+  margin-bottom: 0px;
+}
+
+.messages div {
+  margin-bottom: 10px;
+}
+.messages div img {
+  float: left;
+  padding-left: 10px;
+  display: inline-block;
+}
+.messages div p {
   margin-bottom: 0px;
 }
 
