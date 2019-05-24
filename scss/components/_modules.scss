@@ -127,25 +127,27 @@ footer {
 
 .messages {
 
-div{
+	div{
 
-	@extend %clearfix;
-	margin-bottom: 10px;
+		@extend %clearfix;
+		margin-bottom: 10px;
 
 
-	img {
-		float:left;
-		padding-left: 10px;
-		display: inline-block;
+		img {
+			float:left;
+			padding-left: 10px;
+			display: inline-block;
+		}
+
+		p{
+			margin-bottom:0px;
+		}
 	}
 
-	p{
-		margin-bottom:0px;
-	}
 }
 
-	
-
+section,footer {
+	padding: 10px;
 }
 
 
