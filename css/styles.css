@@ -466,9 +466,11 @@ footer {
 }
 
 h1 {
-  margin: 0px;
   font-size: 1.5em;
   color: #676666;
+  margin: 0px;
+  /*font-size: 1.5em;
+  color: $grey-black;*/
 }
 
 h2 {

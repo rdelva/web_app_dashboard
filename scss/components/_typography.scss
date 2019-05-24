@@ -1,7 +1,9 @@
 h1 {
+	
+@include text(24px, $grey-black, null);
 	margin:0px;
-	font-size: 1.5em;
-	color: $grey-black;
+	/*font-size: 1.5em;
+	color: $grey-black;*/
 }
 
 h2 {
