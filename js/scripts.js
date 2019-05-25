@@ -39,7 +39,7 @@ var myChart = new Chart(ctx, {
             label: 'put it here', // => here
             tension: 0,
             radius : 6, 
-          	pointBackgroundColor: 'rgba(0, 0, 0, 0)',
+          	pointBackgroundColor: 'rgba(255, 255, 255, 1 )',
             backgroundColor : 'rgba(116, 119, 191, .2)',                         
             data: [800, 1300, 1000, 1500, 1900, 1500, 1800, 1300, 1800, 1300, 1700, 2400],
             borderColor: [
