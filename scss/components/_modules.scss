@@ -80,9 +80,9 @@ section {
 
 	li {
 		@extend %clearfix;
-		margin:10px;
+		margin-bottom:10px;
 		padding: 10px;
-		border: solid black 1px;
+		border: solid $grey-purple 1px;
 		color: #fff;
 
 
