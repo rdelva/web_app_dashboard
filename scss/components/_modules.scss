@@ -71,11 +71,23 @@
 	}
 
 }
-/*
-section {
-	
-	border-bottom: 1px solid $grey-purple;
-}*/
+
+
+.new-members-list {
+	p{
+		padding: 0px;
+	}
+
+	a {
+		font-size:14px;
+		color:$faded-indigo;
+	}
+
+
+
+
+}
+
 .social {
 
 	li {
@@ -143,6 +155,12 @@ footer {
 		margin-bottom:0px;
 	}
 
+	div {
+		float: right;
+		font-size: 12px;
+		color: $grey-purple;
+	}
+
 }
 
 
@@ -161,7 +179,9 @@ footer {
 		}
 
 		p{
-			margin-bottom:0px;
+			margin:0px;
+			font-size:14px;
+			color:$grey-black;
 		}
 	}
 

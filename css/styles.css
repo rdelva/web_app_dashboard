@@ -423,11 +423,14 @@ ul {
   color: #fff;
 }
 
-/*
-section {
-	
-	border-bottom: 1px solid $grey-purple;
-}*/
+.new-members-list p {
+  padding: 0px;
+}
+.new-members-list a {
+  font-size: 14px;
+  color: #7477bf;
+}
+
 .social li {
   margin-bottom: 10px;
   padding: 10px;
@@ -469,6 +472,11 @@ footer {
 .members-new p {
   margin-bottom: 0px;
 }
+.members-new div {
+  float: right;
+  font-size: 12px;
+  color: #b2b2b2;
+}
 
 .messages div {
   margin-bottom: 10px;
@@ -479,7 +487,9 @@ footer {
   display: inline-block;
 }
 .messages div p {
-  margin-bottom: 0px;
+  margin: 0px;
+  font-size: 14px;
+  color: #676666;
 }
 
 .new-members-list, .messages, .social, .mobileusers, .dailytraffic, .traffic {
