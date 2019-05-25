@@ -436,7 +436,6 @@ section {
 }
 .social li svg {
   float: left;
-  fill: currentColor;
 }
 .social li div {
   padding-left: 20px;
@@ -549,17 +548,24 @@ nav li a:hover {
   background-color: #b2b2b2;
 }
 
+.facebook {
+  fill: green;
+}
+
+.twitter {
+  fill: red;
+}
+
+.google {
+  fill: #00f;
+}
+
 .icons {
   display: none;
 }
 
-#icon-twitter {
-  color: #fff;
-  fill: currentColor;
-}
-
 .iconColor {
-  color: #ffffff;
+  color: #fff;
   fill: currentColor;
 }
 

@@ -1,18 +1,24 @@
+.facebook{
+	fill: green;
+}
+
+.twitter {
+
+	fill: red;
+
+}
+
+.google {
+	fill:#00f;
+}
+
 .icons {
 	display:none;
 }
 
-#icon {
-	&-twitter {
-		color:$white;
-		fill: currentColor;
-	} 
-}
-
 .iconColor {
-	color:#ffffff;
+	color: #fff;
 	fill: currentColor;
-	
 }
 
 .members{
@@ -27,6 +33,8 @@
 	width:30px;
 	cursor: pointer;
 }
+
+
 
 ul img {
 	width:30px;
