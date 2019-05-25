@@ -61,9 +61,11 @@ var myChart = new Chart(ctx, {
     },
 
     options: {
+      responsive:true,
             legend: {
             display: false
           },
+
         scales: {
             yAxes: [{
                 ticks: {
