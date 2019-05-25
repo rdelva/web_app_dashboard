@@ -1,11 +1,20 @@
 
 //Navigation Menu
-const menu  = document.querySelector("nav ul");
+const menu  = document.querySelector('nav ul');
+const close  = document.querySelector('.alert span:nth-child(2)');
 $(menu).hide();
-$(".menu-btn").click( function(){
+$('.menu-btn').click( function(){
 	
 	$(menu).slideToggle();
 	
+});
+
+
+$(close).click(function(){
+  console.log(close);
+  const alert = document.querySelector('.alert');
+  $(alert).hide();
+
 });
 
 

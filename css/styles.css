@@ -384,7 +384,7 @@ ul {
   transition-property: border;
 }
 
-.alert {
+.alert div {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -394,17 +394,17 @@ ul {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  align-content: flex-start;
 }
-.alert span:first-child {
+.alert div span:first-child {
   color: #fff;
   font-size: 0.75em;
-  align-content: flex-start;
   line-height: 20px;
 }
-.alert span:first-child:hover {
+.alert div span:first-child:hover {
   text-decoration: none;
 }
-.alert span:nth-child(2) {
+.alert div span:nth-child(2) {
   font-size: 20px;
   padding-left: 20px;
   cursor: pointer;

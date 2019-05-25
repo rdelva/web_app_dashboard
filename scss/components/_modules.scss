@@ -24,7 +24,7 @@
 }
 
 
-.alert {
+.alert  div {
 	@include flexBox(flex, row, nowrap);
 	justify-content: space-between;
 	background-color: $faded-indigo;
@@ -32,12 +32,13 @@
 	padding:10px;
 	margin-bottom:10px;
 	border-radius: 5px;
+			align-content: flex-start;
+
 	
 	
 	span:first-child {
 		color: $white;
 		font-size: .75em;		
-		align-content: flex-start;
 		line-height: 20px;
 		&:hover {
 			text-decoration:none;
