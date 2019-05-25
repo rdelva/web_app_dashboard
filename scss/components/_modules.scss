@@ -1,3 +1,9 @@
+.menu-btn {
+	vertical-align: top;
+	display: inline-block;
+}
+
+
 .dashboard {
 		@include flexBox(flex, row, wrap);
 		
