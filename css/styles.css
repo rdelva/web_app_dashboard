@@ -363,15 +363,25 @@ ul {
   min-height: calc(100vh - 100px);
 }
 
+/*[class^="grid__col--"] {
+
+}*/
 .dashboard {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /*@include flexBox(flex, row, wrap);*/
 }
-.dashboard div {
-  padding: 10px 10px 5px 10px;
-  display: inline-block;
-  order: 2;
+.dashboard input {
+  max-width: 100%;
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #b2b2b2;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: #b2b2b2;
+}
+.dashboard input:focus {
+  border-bottom: solid 3px #7477bf;
+  transition-duration: 0.5s;
+  transition-property: border;
 }
 
 .alert {

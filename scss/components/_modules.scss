@@ -2,18 +2,25 @@
 
 
 .dashboard {
-		@include flexBox(flex, row, wrap);
+		/*@include flexBox(flex, row, wrap);*/
 		
-
-		div {
-
-		
-				padding: 10px 10px 5px 10px;
-				display: inline-block;
-				order:2;
-			
+		input {
+			max-width: 100%;
+			width: 100%;
+			padding: 10px;
+			border: solid 1px $grey-purple;
+			border-radius: $br;
+			margin-bottom: 20px;
+			color: $grey-purple;
 		}
-		
+
+		input:focus{
+			border-bottom: solid 3px $faded-indigo;
+			transition-duration: .5s;
+			transition-property: border;
+
+		}
+	
 }
 
 
