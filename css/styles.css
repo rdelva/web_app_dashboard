@@ -363,11 +363,6 @@ ul {
   min-height: calc(100vh - 100px);
 }
 
-.menu-btn {
-  vertical-align: top;
-  display: inline-block;
-}
-
 .dashboard {
   display: flex;
   flex-direction: row;
@@ -504,6 +499,11 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.menu-btn {
+  vertical-align: top;
+  display: inline-block;
 }
 
 .name {
