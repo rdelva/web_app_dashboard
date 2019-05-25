@@ -548,25 +548,17 @@ nav li a:hover {
   background-color: #b2b2b2;
 }
 
-.facebook {
-  fill: green;
+.iconColor {
+  color: #fff;
+  fill: currentColor;
 }
 
-.twitter {
-  fill: red;
-}
-
-.google {
-  fill: #00f;
+.facebook, .twitter, .google {
+  fill: currentColor;
 }
 
 .icons {
   display: none;
-}
-
-.iconColor {
-  color: #fff;
-  fill: currentColor;
 }
 
 .members {

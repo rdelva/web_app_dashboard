@@ -1,25 +1,17 @@
-.facebook{
-	fill: green;
+
+.iconColor {
+	color: $white;
+	fill: currentColor;
 }
-
-.twitter {
-
-	fill: red;
-
-}
-
-.google {
-	fill:#00f;
+.facebook, .twitter, .google{
+	fill: currentColor;
 }
 
 .icons {
 	display:none;
 }
 
-.iconColor {
-	color: #fff;
-	fill: currentColor;
-}
+
 
 .members{
 	
