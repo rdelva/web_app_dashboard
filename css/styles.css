@@ -569,6 +569,7 @@ nav li a:hover {
 
 .bell {
   width: 30px;
+  cursor: pointer;
 }
 
 ul img {

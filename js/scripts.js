@@ -1,7 +1,12 @@
 
 //Navigation Menu
+const header = document.querySelector('header');
+const bell = document.querySelector('.bell');
 const menu  = document.querySelector('nav ul');
 const close  = document.querySelector('.alert span:nth-child(2)');
+  const alert = document.querySelector('.alert');
+
+
 $(menu).hide();
 $('.menu-btn').click( function(){
 	
@@ -14,6 +19,12 @@ $(close).click(function(){
   console.log(close);
   const alert = document.querySelector('.alert');
   $(alert).hide();
+
+});
+
+bell.addEventListener('click', () => {
+
+  alert.style.display ='block';
 
 });
 
