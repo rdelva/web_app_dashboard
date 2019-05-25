@@ -30,7 +30,9 @@
 	background-color: $faded-indigo;
 	color: $white;
 	padding:10px;
-	border-radius: 5px;	
+	border-radius: 5px;
+
+	
 	
 	span:first-child {
 		color: $white;
@@ -162,6 +164,12 @@ footer {
 			margin-bottom:0px;
 		}
 	}
+
+}
+
+.new-members-list, .messages , .social, .mobileusers, .dailytraffic, .traffic{
+
+	border-bottom:  1px  solid $grey-purple;
 
 }
 

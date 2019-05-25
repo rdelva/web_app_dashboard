@@ -483,6 +483,10 @@ footer {
   margin-bottom: 0px;
 }
 
+.new-members-list, .messages, .social, .mobileusers, .dailytraffic, .traffic {
+  border-bottom: 1px solid #b2b2b2;
+}
+
 section, footer {
   padding: 10px;
 }
