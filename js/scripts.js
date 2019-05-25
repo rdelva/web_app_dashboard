@@ -16,7 +16,7 @@ $('.menu-btn').click( function(){
 
 
 $(close).click(function(){
-  console.log(close);
+ 
   const alert = document.querySelector('.alert');
   $(alert).hide();
 
@@ -36,10 +36,11 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ['16-22', '23-29', '30-5', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
         datasets: [{
+            label: 'put it here', // => here
             tension: 0,
             radius : 6, 
-         	pointBackgroundColor: 'rgba(0, 0, 0, 0)',
-            backgroundColor : 'rgba(116, 119, 191, .2)',             
+          	pointBackgroundColor: 'rgba(0, 0, 0, 0)',
+            backgroundColor : 'rgba(116, 119, 191, .2)',                         
             data: [800, 1300, 1000, 1500, 1900, 1500, 1800, 1300, 1800, 1300, 1700, 2400],
             borderColor: [
                'rgba(116, 119, 191, 1)',
@@ -55,13 +56,14 @@ var myChart = new Chart(ctx, {
                'rgba(116, 119, 191, 1)',
                'rgba(116, 119, 191, 1)',
             ],
-            borderWidth: 1
+            borderWidth: 1// => hides the border in the label
         }]
     },
 
     options: {
-
-
+            legend: {
+            display: false
+          },
         scales: {
             yAxes: [{
                 ticks: {
@@ -107,7 +109,9 @@ function dailyTraffic (){
     },
 
     options: {
-
+           legend: {
+            display: false
+          },
 
         scales: {
             yAxes: [{
@@ -155,7 +159,9 @@ var myChart = new Chart(ctx, {
     },
 
     options: {
-
+         legend: {
+            display: false
+          },
 
         scales: {
             yAxes: [{
