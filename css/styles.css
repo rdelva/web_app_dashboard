@@ -385,19 +385,29 @@ ul {
 }
 
 .alert {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   background-color: #7477bf;
   color: #fff;
   padding: 10px;
-  margin: 10px;
-  font-size: 0.75em;
+  margin-bottom: 10px;
   border-radius: 5px;
 }
-.alert a:link {
+.alert span:first-child {
   color: #fff;
+  font-size: 0.75em;
+  align-content: flex-start;
+  line-height: 20px;
+}
+.alert span:first-child:hover {
   text-decoration: none;
 }
-.alert a:link:hover {
-  text-decoration: none;
+.alert span:nth-child(2) {
+  font-size: 20px;
+  padding-left: 20px;
+  cursor: pointer;
 }
 
 .time ul {
