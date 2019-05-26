@@ -1,22 +1,15 @@
 h1 {
-	
-@include text(24px, $grey-black, null);
+	@include text(24px, $grey-black, null);
 	margin:0px;
-	/*font-size: 1.5em;
-	color: $grey-black;*/
 }
 
 h2 {
-	font-size: 1em;
-	color: $grey-black;
+	@include text(16px, $grey-black, null);
 	text-transform: uppercase;
-	
 }
 
 h3 {
-	font-size: .75em;
-	color: $grey-black;
+	@include text(12px, $grey-black, null);
 	text-transform: uppercase;
-	
 }
 
