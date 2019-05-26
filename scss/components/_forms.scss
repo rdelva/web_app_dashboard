@@ -42,6 +42,7 @@ fieldset {
 		
 		color: $grey-black;	
 		font-size: .75em;
+		margin-bottom:20px;
 	}
 
 	select  {
@@ -76,12 +77,19 @@ fieldset {
 
 	}
 
+}		
+
+.switch-ios.switch-light div {
+	display:inline-block;
+	margin-top:8px;
+	width:45%;
+
 }
 
-.switch-ios.switch-light > span {
+.switch-ios.switch-light > span {vertical-align: top;
 	display: inline-block;
-	float:right;
-	margin-bottom:10px;
-	width:30%;
+	width:20%;
+	
 
 }
+

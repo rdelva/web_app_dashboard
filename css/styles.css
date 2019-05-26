@@ -633,6 +633,7 @@ fieldset {
 fieldset label {
   color: #676666;
   font-size: 0.75em;
+  margin-bottom: 20px;
 }
 fieldset select {
   color: #676666;
@@ -661,11 +662,16 @@ fieldset .menu-buttons .btn--cancel {
   width: 45%;
 }
 
-.switch-ios.switch-light > span {
+.switch-ios.switch-light div {
   display: inline-block;
-  float: right;
-  margin-bottom: 10px;
-  width: 30%;
+  margin-top: 8px;
+  width: 45%;
+}
+
+.switch-ios.switch-light > span {
+  vertical-align: top;
+  display: inline-block;
+  width: 20%;
 }
 
 /*# sourceMappingURL=styles.css.map */
