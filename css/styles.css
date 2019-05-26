@@ -412,14 +412,16 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 10px;
   justify-content: space-between;
   font-size: 0.75em;
+  margin-bottom: 20px;
+}
+.time ul li {
+  padding: 5px 10px;
 }
 .time ul li:hover {
   background-color: #81c98f;
   border-radius: 10px;
-  padding: 0.25em;
   color: #fff;
 }
 
