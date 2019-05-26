@@ -111,13 +111,13 @@ function dailyTraffic (){
     },
 
     options: {
-           legend: {
-            display: false
-          },
-
-        scales: {
+      responsive: true,
+      legend: {
+          display: false
+      },
+      scales: {
             yAxes: [{
-                ticks: {
+                  ticks: {
                     beginAtZero: true
                 }
             }]
@@ -131,10 +131,8 @@ function mobileUsers() {
 	var ctx = document.getElementById('mobileChart');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
-    position: 'right',
-    data: {
-        labels: ['Phone', 'Tablets', 'Desktop'],
-        datasets: [{
+      data: {
+           datasets: [{
                    	
             backgroundColor : [
            		'rgba(129, 201, 143, 1)',
@@ -157,18 +155,36 @@ var myChart = new Chart(ctx, {
                'rgba(116, 119, 191, 1)',
             ],
             borderWidth: 1
-        }]
+        }],
+        labels: ['Phone', 'Tablets', 'Desktop'],  
     },
 
     options: {
-         legend: {
-            display: false
-          },
+
+      responsive:true, 
+      legend: {
+          position: 'right',
+        },
 
         scales: {
+            xAxes: [{
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                 ticks: {
+                  display: false
+
+                }
+            }],
             yAxes: [{
+               gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
                 ticks: {
-                    beginAtZero: true
+                  display: false
+
                 }
             }]
         }
