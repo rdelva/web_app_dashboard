@@ -24,6 +24,28 @@
 }
 
 
+.notice {
+	position: relative;
+	padding: 0px;
+	div {
+			padding: 0px;
+			top:0px;
+			right:10px;
+			width:	300px;
+			max-width: 100%;
+			background-color: #fff;
+			z-index: 1;
+			position: absolute;
+			
+			border:solid 1px $grey-purple;
+			border-bottom-right-radius: $br;
+			border-bottom-left-radius: $br;
+		p {
+			border-bottom: solid 1px $faded-indigo;
+		}
+	}
+}
+
 .alert  div {
 	@include flexBox(flex, row, nowrap);
 	justify-content: space-between;

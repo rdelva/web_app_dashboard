@@ -4,7 +4,10 @@ const header = document.querySelector('header');
 const bell = document.querySelector('.bell');
 const menu  = document.querySelector('nav ul');
 const close  = document.querySelector('.alert span:nth-child(2)');
-  const alert = document.querySelector('.alert');
+const alert = document.querySelector('.alert');
+const notice = document.querySelector('.notice div');
+
+
 
 
 $(menu).hide();
@@ -22,10 +25,10 @@ $(close).click(function(){
 
 });
 
-bell.addEventListener('click', () => {
+$(notice).hide();
+$(bell).click(function (){
 
-  alert.style.display ='block';
-
+  $(notice).slideToggle(); 
 });
 
 

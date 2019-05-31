@@ -384,6 +384,27 @@ ul {
   transition-property: border;
 }
 
+.notice {
+  position: relative;
+  padding: 0px;
+}
+.notice div {
+  padding: 0px;
+  top: 0px;
+  right: 10px;
+  width: 300px;
+  max-width: 100%;
+  background-color: #fff;
+  z-index: 1;
+  position: absolute;
+  border: solid 1px #b2b2b2;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.notice div p {
+  border-bottom: solid 1px #7477bf;
+}
+
 .alert div {
   display: flex;
   flex-direction: row;
