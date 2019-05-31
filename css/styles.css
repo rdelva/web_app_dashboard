@@ -401,8 +401,14 @@ ul {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+.notice div h2 {
+  padding: 10px;
+  border-bottom: solid 1px #b2b2b2;
+}
 .notice div p {
-  border-bottom: solid 1px #7477bf;
+  border-bottom: solid 1px #b2b2b2;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .alert div {
@@ -607,8 +613,13 @@ nav li a:hover {
 }
 
 .bell {
+  color: #fff;
   width: 30px;
   cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+.bell:hover {
+  transform: scale(1.5);
 }
 
 ul img {

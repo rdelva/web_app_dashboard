@@ -28,6 +28,12 @@
 	position: relative;
 	padding: 0px;
 	div {
+			h2 {
+				padding: 10px;
+				border-bottom: solid 1px $grey-purple;
+
+			}
+
 			padding: 0px;
 			top:0px;
 			right:10px;
@@ -41,7 +47,9 @@
 			border-bottom-right-radius: $br;
 			border-bottom-left-radius: $br;
 		p {
-			border-bottom: solid 1px $faded-indigo;
+			border-bottom: solid 1px $grey-purple;
+			padding: 10px;
+			font-size: 12px;
 		}
 	}
 }
