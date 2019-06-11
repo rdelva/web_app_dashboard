@@ -532,6 +532,11 @@ footer {
   border-bottom: 1px solid #b2b2b2;
 }
 
+#search {
+  background-color: #fff;
+  z-index: 999;
+}
+
 section, footer {
   padding: 10px;
 }
@@ -632,6 +637,15 @@ li svg {
   border-radius: 50%;
   width: 80px;
   height: 80px;
+}
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
 }
 
 .message-form [type=text] {

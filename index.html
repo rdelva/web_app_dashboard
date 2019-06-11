@@ -7,6 +7,8 @@
 			
 		<link href="Chart/Chart.css" rel="stylesheet">
 		<link href="toggle-switch/toggle-switch.css" rel="stylesheet">
+		  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
 	<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -43,7 +45,7 @@
 					</ul>
 				</nav>
 				<section class="dashboard">
-					<div><input type="text" placeholder="Search" /></div>
+					<div><input type="text" placeholder="Search" id="search" class="ui-autocomplete-input"/></div>
 					<div><h1>Dashboard</h1></div>										
 				</section>
 				<section class="alert">
@@ -57,20 +59,29 @@
 					
 					<div  class="time">
 						<ul>
-							<li>Hourly</li>
-							<li>Daily</li>
-							<li>Weekly</li>
-							<li>Monthly</li>
+							<li id="Hourly">Hourly</li>
+							<li id="Daily">Daily</li>
+							<li id="Weekly">Weekly</li>
+							<li id="Monthly">Monthly</li>
 						</ul>
 					</div>
-					<div>					
-						<canvas id="trafficChart"></canvas>
+					<div id="chart_display">					
+						<canvas id="hourlyChart"></canvas>
+						<canvas id="dailyChart"></canvas>
+						<canvas id="monthlyChart"></canvas>
+						<svg id="weeklyChart" class="bar-chart"></svg>
 					</div>
+
+					
 				</section>
+
+
+
 				<section class="dailytraffic">
 					<h2>Daily Traffic</h2>
 					<div>
 							<canvas id="dailyTraffic"></canvas>
+
 					</div>
 				</section>
 				<section class="mobileusers">
@@ -286,5 +297,7 @@
 		<script src="d3/d3.js" type="text/javascript"></script>
 		<script src="chart/Chart.js" type="text/javascript"></script>
 		<script src="js/scripts.js" type="text/javascript"></script>
+   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	</body>
 </html>

@@ -237,6 +237,10 @@ footer {
 
 }
 
+#search {
+	background-color:$white;
+	z-index: 999;
+}
 
 section,footer {
 	padding: 10px;
