@@ -376,9 +376,9 @@ $( function() {
       "Dan Oliver",
       "Dawn Wood",
       "Victora Chambers",
-      "Settings"
+     
     ];
-    $( "#search" ).autocomplete({
+    $( "#search-user" ).autocomplete({
       source: availableTags
     });
   } );
