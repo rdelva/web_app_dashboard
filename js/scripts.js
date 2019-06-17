@@ -370,19 +370,33 @@ function selectChart(){
 
 }
 
-$( function() {
-    var availableTags = [
-      "Cindy Wood",
-      "Dan Oliver",
-      "Dawn Wood",
-      "Victora Chambers",
-     
-    ];
-    $( "#search-user" ).autocomplete({
-      source: availableTags
-    });
-  } );
 
+function supportsLocalStorage() {
+  try {
+    return 'localsStorage' in window && window['localStorage'] !== null; 
+  }
+
+  catch(e) {
+    return false;
+  }
+}
+
+
+window.onload = function (){
+  if(supportsLocalStorage){
+
+    let searchUser = document.getElementById('search-user');
+    let message = document.getElementById('message');
+    const submit = document.getElementById('submit');
+    
+
+  }
+}
+
+function getRecentSearches(){
+
+
+}
 
 
 

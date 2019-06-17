@@ -204,7 +204,7 @@
 					<form>
 						<h3>Message User</h3>
 						<input type="text" placeholder="Search for User" id="search-user" required />
-						<textarea type="textarea" placeholder="Message for User"></textarea>
+						<textarea type="textarea" placeholder="Message for User" id="message"></textarea>
 						<button type="submit" id="submit">SEND</button>
 					</form>
 				</section>
@@ -227,7 +227,7 @@
 						<div>
 							<label class="switch-light switch-ios" onclick="">
 								<div>Set Profile to Public</div>
-								<input type="checkbox" checked> 
+								<input type="checkbox" id="public-profile" checked> 
 								<span>
 									<span>Off</span>
 									<span>On</span>
@@ -236,7 +236,7 @@
 							</label> 
 						</div>
 				
-				<select name="timezone_offset" id="timezone-offset" class="span5">
+				<select name="timezone" id="timezone">
 					<option value="">Select a time zone</option>
 					<option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
 					<option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
