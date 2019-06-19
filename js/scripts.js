@@ -385,20 +385,65 @@ function supportsLocalStorage() {
 window.onload = function (){
   if(supportsLocalStorage){
 
+    
     let searchUser = document.getElementById('search-user');
     let message = document.getElementById('message');
+    let messenger =  document.getgetElementById('messenger');
     const submit = document.getElementById('submit');
+
+    let emailNotice = document.getElementById('email-notice');
+    let publicProfile = document.getElementById('public-profile');
+    let timezoneSet = document.getElementById('timeZone');
+    const saveSettings = document.getElementById('save-settings');
+    const reset = document.getElementById('reset');
+
+    messenger.addEventListener('submit', function(e) {
+
+
+      let userName = searchUser.value;
+
+      if(saveSearchString(userName)) {
+
+        appendListItem(recentSearchList, userName);
+        
+      }
+
+
+      
+
+
+    });
+
+
+   function getRecentSearches(){
+
+   } 
+
+  function saveSearchString(str) {
+
+    var users = getRecentSearches();
+
+  }
+
     
+
+
+
 
   }
 }
 
-function getRecentSearches(){
+function getResults(){
+
+  var lclTimezoneSet = localStorage.getItem('timezoneSet');
 
 
 }
 
 
+function submitted() {
+  alert('Form is submitted');
+}
 
 traffic();
 dailyTraffic();
