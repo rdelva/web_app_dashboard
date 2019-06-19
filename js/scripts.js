@@ -372,8 +372,9 @@ function selectChart(){
 
 
 function supportsLocalStorage() {
+  'use strict';
   try {
-    return 'localsStorage' in window && window['localStorage'] !== null; 
+    return 'localStorage' in window && window['localStorage'] !== null; 
   }
 
   catch(e) {
@@ -381,14 +382,28 @@ function supportsLocalStorage() {
   }
 }
 
+function getUserNames(){
+  let userNameList = localStorage.getItem('user_names');
+  if(userNamesList){
+    return JSON.parse(searches); // makes the usernameList into an array
+   } else {
+      return []; //
+   }
+
+}
+
+function saveUserName(userName){
+
+
+}
 
 window.onload = function (){
   if(supportsLocalStorage){
-
     
+
+    let messenger =  document.getgetElementById('messenger');    
     let searchUser = document.getElementById('search-user');
     let message = document.getElementById('message');
-    let messenger =  document.getgetElementById('messenger');
     const submit = document.getElementById('submit');
 
     let emailNotice = document.getElementById('email-notice');
@@ -399,10 +414,11 @@ window.onload = function (){
 
     messenger.addEventListener('submit', function(e) {
 
-
+      // grabs the username
       let userName = searchUser.value;
 
-      if(saveSearchString(userName)) {
+      //goes to the saveUserName() and check if its a stringholds onto the username
+      if(saveUserName(userName)) {
 
         appendListItem(recentSearchList, userName);
         
