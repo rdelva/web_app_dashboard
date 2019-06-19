@@ -376,32 +376,38 @@ function supportsLocalStorage() {
   try {
     return 'localStorage' in window && window['localStorage'] !== null; 
   }
-
   catch(e) {
     return false;
   }
 }
 
+
+
 function getUserNames(){
-  let userNameList = localStorage.getItem('user_names');
-  if(userNamesList){
-    return JSON.parse(searches); // makes the usernameList into an array
+  let userNameList = localStorage.getItem('userNames');
+  if(userNameList){
+    return JSON.parse(userNameList); // makes the usernameList into an array
    } else {
       return []; //
    }
 
 }
 
-function saveUserName(userName){
+function saveUserNames(userName){
 
-
+  let  messageUserList = getUserNames();
+    if(!str || messageUserList.indexOf(str) > -1){
+      return false;
+    }
+  
+  messageUserList.setItem('userNames', JSON.stringify(messageUserList));
+  return true;
 }
 
 window.onload = function (){
   if(supportsLocalStorage){
-    
-
-    let messenger =  document.getgetElementById('messenger');    
+    let messenger =  document.getElementById('messenger');
+    let enteredList = document.getElementById('enteredList');
     let searchUser = document.getElementById('search-user');
     let message = document.getElementById('message');
     const submit = document.getElementById('submit');
@@ -412,42 +418,33 @@ window.onload = function (){
     const saveSettings = document.getElementById('save-settings');
     const reset = document.getElementById('reset');
 
+    //Initialize display list
+    let messageUserList = getUserNames();
+   
+    messageUserList.forEach(function(searchUser){
+
+       appendListItem(enteredList, userName);
+
+    });
+
+
     messenger.addEventListener('submit', function(e) {
 
       // grabs the username
       let userName = searchUser.value;
 
       //goes to the saveUserName() and check if its a stringholds onto the username
-      if(saveUserName(userName)) {
-
-        appendListItem(recentSearchList, userName);
-        
+      if(saveUserNames(userName)) {
+        appendListItem(enteredList, userName);
+   
       }
-
-
-      
-
 
     });
 
 
-   function getRecentSearches(){
-
-   } 
-
-  function saveSearchString(str) {
-
-    var users = getRecentSearches();
 
   }
-
-    
-
-
-
-
-  }
-}
+}// end of window.onload()
 
 function getResults(){
 
