@@ -396,13 +396,44 @@ function getUserNames(){
 function saveUserNames(userName){
 
   let  messageUserList = getUserNames();
-    if(!str || messageUserList.indexOf(str) > -1){
+    if(!userName || messageUserList.indexOf(userName) > -1){
       return false;
     }
+
+  messageUserList.push(userName);
   
-  messageUserList.setItem('userNames', JSON.stringify(messageUserList));
+  localStorage.setItem('userNames', JSON.stringify(messageUserList));
   return true;
 }
+
+function appendListItem(listElement,string) {
+  let listItemElement = document.createElement('LI');
+  listItemElement.innerHTML = string;
+  listElement.appendChild(listItemElement);
+  listElement.style.display = 'none';
+
+
+}
+
+function autofill() {
+
+
+  let searchUser = document.getElementById('search-user');
+  //when user clicks in textbox list appears
+
+  searchUser.addEventListener('change', function(e){
+       let list = document.getElementById('enteredList');
+
+
+    list.style.display = 'block';
+
+  });
+
+}
+
+
+
+
 
 window.onload = function (){
   if(supportsLocalStorage){
@@ -418,10 +449,14 @@ window.onload = function (){
     const saveSettings = document.getElementById('save-settings');
     const reset = document.getElementById('reset');
 
+
+
+
+
     //Initialize display list
     let messageUserList = getUserNames();
    
-    messageUserList.forEach(function(searchUser){
+    messageUserList.forEach(function(userName){
 
        appendListItem(enteredList, userName);
 
@@ -440,8 +475,6 @@ window.onload = function (){
       }
 
     });
-
-
 
   }
 }// end of window.onload()

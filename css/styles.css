@@ -537,6 +537,10 @@ footer {
   z-index: 999;
 }
 
+#enteredList {
+  z-index: 1;
+}
+
 section, footer {
   padding: 10px;
 }
