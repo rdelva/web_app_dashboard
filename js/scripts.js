@@ -415,25 +415,6 @@ function appendListItem(listElement,string) {
 
 }
 
-function autofill() {
-
-
-  let searchUser = document.getElementById('search-user');
-  //when user clicks in textbox list appears
-
-  searchUser.addEventListener('change', function(e){
-       let list = document.getElementById('enteredList');
-
-
-    list.style.display = 'block';
-
-  });
-
-}
-
-
-
-
 
 window.onload = function (){
   if(supportsLocalStorage){
@@ -450,30 +431,20 @@ window.onload = function (){
     const reset = document.getElementById('reset');
 
 
-
-
-
     //Initialize display list
-    let messageUserList = getUserNames();
-   
+    let messageUserList = getUserNames();   
     messageUserList.forEach(function(userName){
-
        appendListItem(enteredList, userName);
-
     });
 
-
     messenger.addEventListener('submit', function(e) {
-
+      e.preventDefault();
       // grabs the username
       let userName = searchUser.value;
-
       //goes to the saveUserName() and check if its a stringholds onto the username
       if(saveUserNames(userName)) {
-        appendListItem(enteredList, userName);
-   
+        appendListItem(enteredList, userName);   
       }
-
     });
 
   }
@@ -487,10 +458,24 @@ function getResults(){
 }
 
 
+function autofill() {
+  let searchUser = document.getElementById('search-user');
+  //when user clicks in textbox list appears
+  searchUser.addEventListener('input', function(e){
+
+    let list = document.getElementById('enteredList');
+    list.style.display = 'block';
+
+  });
+
+}
+
+
 function submitted() {
   alert('Form is submitted');
 }
 
+autofill();
 traffic();
 dailyTraffic();
 dailyTraffic2();
