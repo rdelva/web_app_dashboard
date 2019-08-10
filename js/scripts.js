@@ -383,37 +383,9 @@ function supportsLocalStorage() {
 
 
 
-function getUserNames(){
-  let userNameList = localStorage.getItem('userNames');
-  if(userNameList){
-    return JSON.parse(userNameList); // makes the usernameList into an array
-   } else {
-      return []; //
-   }
-
-}
-
-function saveUserNames(userName){
-
-  let  messageUserList = getUserNames();
-    if(!userName || messageUserList.indexOf(userName) > -1){
-      return false;
-    }
-
-  messageUserList.push(userName);
-  
-  localStorage.setItem('userNames', JSON.stringify(messageUserList));
-  return true;
-}
-
-function appendListItem(listElement,string) {
-  let listItemElement = document.createElement('LI');
-  listItemElement.innerHTML = string;
-  listElement.appendChild(listItemElement);
-  listElement.style.display = 'none';
 
 
-}
+
 
 
 window.onload = function (){
@@ -427,24 +399,29 @@ window.onload = function (){
     let emailNotice = document.getElementById('email-notice');
     let publicProfile = document.getElementById('public-profile');
     let timezoneSet = document.getElementById('timeZone');
+    let settings  = document.getElementById('settings');
     const saveSettings = document.getElementById('save-settings');
     const reset = document.getElementById('reset');
 
 
     //Initialize display list
-    let messageUserList = getUserNames();   
-    messageUserList.forEach(function(userName){
-       appendListItem(enteredList, userName);
-    });
-
+  
     messenger.addEventListener('submit', function(e) {
       e.preventDefault();
-      // grabs the username
-      let userName = searchUser.value;
-      //goes to the saveUserName() and check if its a stringholds onto the username
-      if(saveUserNames(userName)) {
-        appendListItem(enteredList, userName);   
+   
+    });
+
+    settings.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let emailNotice = document.getElementById('email-notice');
+
+      if(emailNotice.checked){
+        console.log("It's true");
+      } else {
+        console.log("It's false");
       }
+
+   
     });
 
   }
@@ -458,24 +435,14 @@ function getResults(){
 }
 
 
-function autofill() {
-  let searchUser = document.getElementById('search-user');
-  //when user clicks in textbox list appears
-  searchUser.addEventListener('input', function(e){
 
-    let list = document.getElementById('enteredList');
-    list.style.display = 'block';
 
-  });
-
-}
 
 
 function submitted() {
   alert('Form is submitted');
 }
 
-autofill();
 traffic();
 dailyTraffic();
 dailyTraffic2();

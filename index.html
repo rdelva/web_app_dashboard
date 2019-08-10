@@ -203,8 +203,8 @@
 				<section class="message-form">
 					<form id="messenger" >
 						<h3>Message User</h3>
-						<input type="text" placeholder="Search for User" id="search-user" required autocomplete="off"  list="search-user" name="search-user"/>
-						  <datalist id="search-user">
+						<input type="text" placeholder="Search for User" id="search-user" required autocomplete="off"  list="user_list" name="search-user"/>
+						  <datalist id="user_list">
 						    <option value="Dan Oliver">
 						    <option value="Cindy Wood">
 						    <option value="Dale Byrd">
@@ -212,8 +212,7 @@
 						    <option value="Dawn Wood">
 						  </datalist>
 						
-						<ul id="enteredList"></ul>
-						
+												
 						<textarea type="textarea" placeholder="Message for User" id="message"></textarea>
 						<button type="submit" id="submit">SEND</button>
 					</form>
@@ -226,7 +225,7 @@
 								<div>
 									<label class="switch-light switch-ios" onclick=""  >
 										
-										<input type="checkbox" id="email-notice" checked> 
+										<input type="checkbox" id="email-notice" > 
 										<div>Send Email Notifications</div>				
 											<span>
 												<span>Off</span>
