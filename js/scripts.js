@@ -9,8 +9,13 @@ const notice = document.querySelector('.notice div');
 
 
 
+if(document.width < 769){
+  $(menu).hide();
+} else {
+    $(menu).show();
+}
 
-$(menu).hide();
+
 $('.menu-btn').click( function(){
 	
 	$(menu).slideToggle();

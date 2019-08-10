@@ -577,6 +577,11 @@ header {
   vertical-align: top;
   display: inline-block;
 }
+@media (min-width: 769px) {
+  .menu-btn {
+    display: none;
+  }
+}
 
 .name {
   display: none;
@@ -600,6 +605,13 @@ nav li a:hover {
   border-left: 3px solid #fff;
   text-decoration: none;
   background-color: #b2b2b2;
+}
+@media (min-width: 769px) {
+  nav {
+    display: block;
+    float: left;
+    width: 20%;
+  }
 }
 
 .iconColor {

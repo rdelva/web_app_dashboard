@@ -10,10 +10,14 @@ header {
 .menu-btn {
 	vertical-align: top;
 	display: inline-block;
+
+	@include mq (medium){
+		display:none;
+	}
 }
 
 .name {
-	display: none;
+	display: none; 
 }
 
 .title {
@@ -40,7 +44,18 @@ nav {
 					background-color: $grey-purple;
 				}
 			}
+
+			
+
 		}
+
+	@include mq(medium){
+		display:block;
+		float: left;
+		width:20%;
+
+		
+	}	
 	
 }
 
