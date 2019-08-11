@@ -3,6 +3,29 @@
 
 }
 
+.content {
+	
+	@include flexBox(flex, colmumn, nowrap);
+
+	
+	@include mq(medium){
+		
+		@include flexBox(flex, row, wrap);
+
+		
+
+	}
+
+
+}
+
+.container_section {
+
+flex-grow: 2;
+	
+}
+
+
 /*[class^="grid__col--"] {
 
 }*/

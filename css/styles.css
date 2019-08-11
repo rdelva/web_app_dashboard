@@ -363,6 +363,16 @@ ul {
   min-height: calc(100vh - 100px);
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container_section {
+  flex-grow: 2;
+}
+
 /*[class^="grid__col--"] {
 
 }*/
@@ -396,7 +406,7 @@ ul {
   max-width: 100%;
   background-color: #fff;
   z-index: 1;
-  position: absolute;
+  /*position: absolute;*/
   border: solid 1px #b2b2b2;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -596,7 +606,7 @@ nav {
   color: #fff;
 }
 nav li a {
-  display: block;
+  /*display: block;*/
   color: #fff;
   text-decoration: none;
   padding: 10px 5px;
@@ -607,10 +617,13 @@ nav li a:hover {
   background-color: #b2b2b2;
 }
 @media (min-width: 769px) {
+  nav li a span {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
   nav {
-    display: block;
-    float: left;
-    width: 20%;
+    flex-grow: 1;
   }
 }
 

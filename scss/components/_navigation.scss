@@ -27,12 +27,13 @@ header {
 
 
 nav {
+
 	background-color:$twilight-purple;
 	color:$white;
 		li {
 
 			a {
-				display: block;
+				/*display: block;*/
 				color: $white;
 				text-decoration: none;
 				padding: 10px 5px;
@@ -43,19 +44,19 @@ nav {
 					text-decoration: none;
 					background-color: $grey-purple;
 				}
+
+
+				span {
+					@include mq(medium){
+						display:none;
+					}
+				}
 			}
-
-			
-
 		}
 
-	@include mq(medium){
-		display:block;
-		float: left;
-		width:20%;
-
-		
-	}	
+		@include mq(medium){
+			flex-grow: 1;
+		}
 	
 }
 
