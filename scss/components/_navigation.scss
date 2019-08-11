@@ -11,6 +11,7 @@ header {
 	vertical-align: top;
 	display: inline-block;
 
+
 	@include mq (medium){
 		display:none;
 	}
@@ -21,42 +22,53 @@ header {
 }
 
 .title {
-	padding-top: 30px;
+	padding-top: 20px;
+	font-size: 2em;
 	
 }
 
 
 nav {
 
+	height:50px;
 	background-color:$twilight-purple;
 	color:$white;
-		li {
-
+	@include flexBox(flex, row, nowrap);
+	justify-content:space-around;
+	
+	@include mq(medium){
+	
+		@include flexBox(flex, column, wrap);
+		min-height: calc(100vh - 20px);
+;
+		
+	}
 			a {
-				/*display: block;*/
+				
 				color: $white;
 				text-decoration: none;
-				padding: 10px 5px;
-
+				padding:10px;
 
 				&:hover {
-					border-left:3px solid $white;
+					border-bottom:3px solid $white;
 					text-decoration: none;
 					background-color: $grey-purple;
-				}
-
-
-				span {
+					
 					@include mq(medium){
-						display:none;
+						border-left: 5px solid $green;
+						background-color: transparent;
+						border-bottom:none;
 					}
 				}
-			}
-		}
+				span {
+					display:none;
+				}
 
-		@include mq(medium){
-			flex-grow: 1;
-		}
-	
+				@include mq(medium){
+					@include flexBox(flex, column, nowrap);	
+					padding:10px;
+				}
+
+			}
 }
 

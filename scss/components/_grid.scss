@@ -1,11 +1,11 @@
 .wrapper {
-	min-height: calc(100vh - 100px);
+	min-height: calc(100vh - 20px);
 
 }
 
-.content {
+.grid-container {
 	
-	@include flexBox(flex, colmumn, nowrap);
+	
 
 	
 	@include mq(medium){
@@ -19,13 +19,3 @@
 
 }
 
-.container_section {
-
-flex-grow: 2;
-	
-}
-
-
-/*[class^="grid__col--"] {
-
-}*/

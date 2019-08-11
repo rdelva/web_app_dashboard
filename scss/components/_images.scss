@@ -33,9 +33,14 @@
 
 
 
-ul img {
+nav img {
 	width:30px;
-	padding-right: 10px;
+	max-width:100%;
+	padding-right: 2px;
+	@include mq(medium){
+		padding-right:0px;
+
+	}
 
 }
 
