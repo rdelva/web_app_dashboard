@@ -1,4 +1,7 @@
+section{
+	@extend %clearfix;
 
+}
 
 
 .dashboard {
@@ -23,34 +26,55 @@
 	
 }
 
+#widget {
+		&-notice{
+
+			position: relative;
+
+			div {
+				
+				width:300px;				
+				float:right;
+				background-color: #fff;
+				border:solid 1px $grey-purple;
+				border-bottom-right-radius: $br;
+				border-bottom-left-radius: $br;
+				z-index: 1;
+
+
+					h2 {
+						padding: 10px;
+						border-bottom: solid 1px $grey-purple;
+						margin-bottom: 0px;
+					}
+
+					p {
+						border-bottom: solid 1px $grey-purple;
+						padding: 10px;
+						font-size: 12px;
+						background-color: #eee;
+						margin: 0px;
+					}
+			}
+		
+		}	
+}/* end of widget-notice*/
 
 .notice {
-	position: relative;
-	padding: 0px;
+
 	div {
-			h2 {
-				padding: 10px;
-				border-bottom: solid 1px $grey-purple;
-
-			}
-
-			padding: 0px;
-			top:0px;
-			right:10px;
-			width:	300px;
-			max-width: 100%;
-			background-color: #fff;
-			z-index: 1;
-			/*position: absolute;*/
+		
+	
+		width:	300px;
+		max-width: 100%;
+		background-color: #fff;
+		z-index: 1;
+		/*position: absolute;*/
 			
-			border:solid 1px $grey-purple;
-			border-bottom-right-radius: $br;
-			border-bottom-left-radius: $br;
-		p {
-			border-bottom: solid 1px $grey-purple;
-			padding: 10px;
-			font-size: 12px;
-		}
+		
+		
+	
+
 	}
 }
 
@@ -246,9 +270,5 @@ footer {
 	z-index:1;
 }
 
-section,footer {
-	padding: 10px;
-
-}
 
 

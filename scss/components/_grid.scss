@@ -4,18 +4,15 @@
 }
 
 .grid-container {
-	
-	
-
-	
-	@include mq(medium){
-		
+	@include mq(medium){		
 		@include flexBox(flex, row, wrap);
-
-		
-
 	}
-
-
 }
 
+main {
+	@include mq(medium){
+
+		flex-grow:2;
+
+	}
+}

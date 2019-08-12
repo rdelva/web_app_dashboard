@@ -18,7 +18,12 @@ header {
 }
 
 .name {
-	display: none; 
+	display:none;
+
+	@include mq(medium){
+		display:inline-block;
+
+	}
 }
 
 .title {
@@ -40,8 +45,10 @@ nav {
 	
 		@include flexBox(flex, column, wrap);
 		min-height: calc(100vh - 20px);
-;
-		
+		justify-content: flex-start;
+		padding: 20px 0;
+		width:50px;
+
 	}
 			a {
 				
@@ -64,11 +71,7 @@ nav {
 					display:none;
 				}
 
-				@include mq(medium){
-					@include flexBox(flex, column, nowrap);	
-					padding:10px;
-				}
-
+		
 			}
 }
 

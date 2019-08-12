@@ -2,10 +2,11 @@
 //Navigation Menu
 const header = document.querySelector('header');
 const bell = document.querySelector('.bell');
+const badge = document.querySelector('.badge');
 const menu  = document.querySelector('nav ul');
 const close  = document.querySelector('.alert span:nth-child(2)');
 const alert = document.querySelector('.alert');
-const notice = document.querySelector('.notice div');
+const notice = document.querySelector('#widget-notice div');
 
 
 
@@ -30,7 +31,7 @@ $(close).click(function(){
 
 $(notice).hide();
 $(bell).click(function (){
-
+  $(badge).hide();
   $(notice).slideToggle(); 
 });
 

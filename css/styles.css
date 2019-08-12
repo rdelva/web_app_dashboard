@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-.messages div:after, .members-new:after, .social li svg:after, .social li:after {
+.messages div:after, .members-new:after, .social li svg:after, .social li:after, section:after {
   content: "";
   display: table;
   clear: both;
@@ -371,6 +371,12 @@ ul {
   }
 }
 
+@media (min-width: 769px) {
+  main {
+    flex-grow: 2;
+  }
+}
+
 .dashboard {
   /*@include flexBox(flex, row, wrap);*/
 }
@@ -389,31 +395,38 @@ ul {
   transition-property: border;
 }
 
-.notice {
+#widget-notice {
   position: relative;
-  padding: 0px;
 }
+#widget-notice div {
+  width: 300px;
+  float: right;
+  background-color: #fff;
+  border: solid 1px #b2b2b2;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  z-index: 1;
+}
+#widget-notice div h2 {
+  padding: 10px;
+  border-bottom: solid 1px #b2b2b2;
+  margin-bottom: 0px;
+}
+#widget-notice div p {
+  border-bottom: solid 1px #b2b2b2;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #eee;
+  margin: 0px;
+}
+
+/* end of widget-notice*/
 .notice div {
-  padding: 0px;
-  top: 0px;
-  right: 10px;
   width: 300px;
   max-width: 100%;
   background-color: #fff;
   z-index: 1;
   /*position: absolute;*/
-  border: solid 1px #b2b2b2;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.notice div h2 {
-  padding: 10px;
-  border-bottom: solid 1px #b2b2b2;
-}
-.notice div p {
-  border-bottom: solid 1px #b2b2b2;
-  padding: 10px;
-  font-size: 12px;
 }
 
 .alert div {
@@ -546,10 +559,6 @@ footer {
   z-index: 1;
 }
 
-section, footer {
-  padding: 10px;
-}
-
 h1 {
   font-size: 1.5em;
   color: #676666;
@@ -591,6 +600,11 @@ header {
 .name {
   display: none;
 }
+@media (min-width: 769px) {
+  .name {
+    display: inline-block;
+  }
+}
 
 .title {
   padding-top: 20px;
@@ -612,6 +626,9 @@ nav {
     flex-direction: column;
     flex-wrap: wrap;
     min-height: calc(100vh - 20px);
+    justify-content: flex-start;
+    padding: 20px 0;
+    width: 50px;
   }
 }
 nav a {
@@ -634,14 +651,6 @@ nav a:hover {
 nav a span {
   display: none;
 }
-@media (min-width: 769px) {
-  nav a {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: 10px;
-  }
-}
 
 .iconColor {
   color: #fff;
@@ -656,7 +665,24 @@ nav a span {
   display: none;
 }
 
+.header-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 .members {
+  border-radius: 50%;
+  width: 60px;
+  padding-right: 10px;
+}
+
+.avatar {
+  display: inline-block;
+  border-left: 1px blue solid;
+}
+.avatar img {
+  padding-left: 10px;
   border-radius: 50%;
   width: 60px;
   padding-right: 10px;
@@ -666,15 +692,37 @@ nav a span {
   color: #fff;
   width: 30px;
   cursor: pointer;
+  display: inline;
   transition: transform 0.3s ease-out;
+  position: relative;
+  margin: 10px 10px 0 0;
 }
 .bell:hover {
-  transform: scale(1.5);
+  transform: rotate(-30deg);
+}
+.bell-icon {
+  display: inline;
+}
+
+.badge {
+  background-color: #81c98f;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 80px;
+}
+@media (min-width: 769px) {
+  .badge {
+    top: 20px;
+    right: 175px;
+  }
 }
 
 nav img {
   width: 30px;
-  max-width: 100%;
   padding-right: 2px;
 }
 @media (min-width: 769px) {
