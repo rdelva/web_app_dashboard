@@ -40,7 +40,9 @@ nav {
 	color:$white;
 	@include flexBox(flex, row, nowrap);
 	justify-content:space-around;
+	width:100%;
 	
+
 	@include mq(medium){
 	
 		@include flexBox(flex, column, wrap);
