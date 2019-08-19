@@ -51,9 +51,6 @@ section{
 				border-radius: $br;
 				color: $grey-purple;
 				padding: 10px;
-				background-image:url('icons/icon-search.svg');
-    			background-repeat:no-repeat;
-   				background-position:left top;  padding-left:15px;
 				@include mq(medium){
 					width: 80%;
 

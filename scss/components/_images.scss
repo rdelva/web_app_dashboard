@@ -103,3 +103,16 @@ li svg {
   margin: 1px;
   color: white;
 }
+
+#search {
+	&-icon {
+		width: 30px;
+  		height: 30px;
+  		right: 30px;
+  		top: 8px;
+  		position: relative;
+  		background: url('../icons/icon-search.svg');
+  		background-size: 25px 25px;
+  		background-repeat:no-repeat;
+	}
+}
