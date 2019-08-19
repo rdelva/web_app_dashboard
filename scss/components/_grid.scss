@@ -5,7 +5,7 @@
 
 .grid-container {
 	@include mq(medium){		
-		@include flexBox(flex, row, wrap);
+		@include flexBox(flex, row, nowrap);
 	}
 }
 
@@ -13,13 +13,20 @@ main {
 	@include mq(medium){
 		@include flexBox(flex, column, nowrap);
 
-		width: 92%;
+		min-width: calc(100vw - 65px);
+
+	}
+
+	@include mq(large){
+		@include flexBox(flex, column, nowrap);
+
+		min-width: calc(100vw - 67px);
 
 	}
 }
 
 
-
+/*
 @include mq(medium){
 
 .col-1 {
@@ -79,3 +86,4 @@ main {
 	
 }
 
+*/

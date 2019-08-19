@@ -67,7 +67,7 @@
     	}
 	}
 	@else if $break == 'medium'{
-		@media (min-width:$brkpoint-m + 1){
+		@media (min-width:$brkpoint-m + 1) {
           @content;
      	}
 	}

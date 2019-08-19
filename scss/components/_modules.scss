@@ -9,10 +9,7 @@ section{
 		@include flexBox(flex, column, wrap);
 
 		@include mq(medium){
-			@include flexBox(flex, row, nowrap){
-
-
-			}
+			@include flexBox(flex, row, nowrap);		
 
 		}
 
