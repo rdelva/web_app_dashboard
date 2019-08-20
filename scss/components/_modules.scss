@@ -34,6 +34,7 @@ section{
 			padding:10px;
 			order: 1;
 			width: 100%;
+			position:relative;
 			@include mq (medium){
 				order:2;
 				max-width: calc(100vw - 134px);
@@ -51,6 +52,7 @@ section{
 				border-radius: $br;
 				color: $grey-purple;
 				padding: 10px;
+				position: relative;
 				@include mq(medium){
 					width: 80%;
 
