@@ -1,0 +1,85 @@
+//BEM Elements
+
+@mixin e($element) {
+	&__#{$element}{
+		@content;
+	}
+}
+
+@mixin m($modifier) {
+	&--#{$modifier}{
+		@content;
+	}
+}
+
+//Flexbox mixin
+
+@mixin flexBox($disp, $flexDir, $flexWrap){
+		display: $disp;
+		flex-direction: $flexDir;
+		flex-wrap: $flexWrap;
+
+		@content;
+
+}
+
+//Text 
+
+@mixin text($fontSize:$base__font-size, $color:null, $weight:null){
+
+	font-size: em($fontSize);
+	color: $color;
+	font-weight: $weight;
+
+	@content;
+	
+
+}
+
+//
+
+// Generate modifier color classes
+
+@mixin ui-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme} {
+			background-color: $color;
+			@content;
+			
+		}
+	}
+
+}
+
+   
+
+
+
+
+//Media Query Mixins
+
+@mixin mq($break){
+
+
+	@if $break == "small" {
+		@media (min-width:$brkpoint-xs) and (max-width: $brkpoint-m){
+        	@content;
+    	}
+	}
+	@else if $break == 'medium'{
+		@media (min-width:$brkpoint-m + 1) {
+          @content;
+     	}
+	}
+
+	@else if $break == "large" {
+      @media (min-width:$brkpoint-lg) {
+          @content;
+      }
+  	} 
+   	@else  {
+      @error "Whoops! No value could be retrieved for] ' #{$break}  ' "
+    
+    }
+
+}

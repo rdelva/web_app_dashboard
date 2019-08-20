@@ -1,0 +1,19 @@
+//=========================================================
+// Base Styles
+//=========================================================
+
+* {
+	
+	box-sizing:  border-box;
+}
+
+body {
+	font-family: $primary-font-stack;	
+}
+
+ul {
+	list-style-type:none;
+	margin:0px;
+	padding: 0px;
+}
+

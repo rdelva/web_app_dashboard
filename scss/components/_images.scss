@@ -1,0 +1,123 @@
+
+.iconColor {
+	color: $white;
+	fill: currentColor;
+}
+.facebook, .twitter, .google{
+	fill: currentColor;
+}
+
+.icons {
+	display:none;
+}
+
+
+.header-icons {
+	@include flexBox(flex, row, nowrap);
+}
+
+
+.members{
+	
+	border-radius: 50%;
+	width:60px;
+	padding-right: 10px;
+
+}
+
+.avatar {
+	display:inline-block;
+	border-left: 1px blue solid;
+
+	img {
+		padding-left: 10px;
+		border-radius: 50%;
+		width:60px;
+		padding-right: 10px;
+	}
+	
+	
+}
+
+.bell {
+	color:$white;
+	width:30px;
+	cursor: pointer;
+	display: inline;
+	transition: transform .3s ease-out;
+	&:hover {
+		transform: rotate(-30deg);
+	}
+	position:relative;
+	margin:10px 10px 0 0;
+
+	&-icon {
+		display: inline;
+	}
+}
+
+.badge {
+	background-color: $green;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+  	right: 80px;
+
+
+	@include mq(medium){
+		top: 20px;
+  		right: 175px;
+	}
+  	
+
+}
+
+
+nav img {
+	width:30px;
+
+	padding-right: 2px;
+	@include mq(medium){
+		padding-right:0px;
+
+	}
+
+}
+
+li svg {
+	background-color: $twilight-purple;
+	border-radius:50%;
+	width: 80px;
+	height: 80px;
+}
+
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+#search {
+	&-icon {
+		width: 30px;
+  		height: 30px;
+  		position: relative;
+  		right: -135px;
+  		top:-32px;
+  		background: url('../icons/icon-search.svg');
+  		background-size: 25px 25px;
+  		background-repeat:no-repeat;
+  		@include mq(medium){
+  			position: absolute;
+  			right: 30px;
+  			top: 8px;
+  		}
+	}
+}

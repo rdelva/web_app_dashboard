@@ -1,0 +1,302 @@
+section{
+	@extend %clearfix;
+
+}
+
+
+.dashboard {
+
+		@include flexBox(flex, column, wrap);
+
+		@include mq(medium){
+			@include flexBox(flex, row, nowrap);		
+
+		}
+
+	
+		div:first-child  {
+			padding: 10px;
+			@include flexBox(flex, row, wrap) {
+				justify-content: space-around;
+				order:2;
+			}
+			@include mq (medium){
+				order:1;				
+			}
+		}
+		
+		div:nth-child(2){
+			@include flexBox(flex, row, wrap) {
+				justify-content: space-around;
+			}
+			background-color: #eee;		
+			border-bottom: 1px solid $grey-purple;
+			padding:10px;
+			order: 1;
+			width: 100%;
+			position:relative;
+			@include mq (medium){
+				order:2;
+				max-width: calc(100vw - 134px);
+				border-left: 1px solid $grey-purple;
+				border-bottom-left-radius: $br;
+				@include flexBox(flex, row, wrap){
+					justify-content: flex-end;
+				}
+
+			}
+			#search {
+				width: 100%;
+				max-width: 100%;
+				border: solid 1px $grey-purple;
+				border-radius: $br;
+				color: $grey-purple;
+				padding: 10px;
+				position: relative;
+				@include mq(medium){
+					width: 80%;
+
+				}
+
+				&:focus{
+					border-bottom: solid 3px $faded-indigo;
+					transition-duration: .5s;
+					transition-property: border;
+				}
+			}
+		}
+		
+	
+}
+
+
+
+#widget {
+		&-notice{
+
+			position: relative;
+
+			div {
+				
+				width:300px;				
+				float:right;
+				top:-10px;
+				right:-40px;
+				position: absolute;
+				background-color: #fff;
+				border:solid 1px $grey-purple;
+				border-bottom-right-radius: $br;
+				border-bottom-left-radius: $br;
+				z-index: 1;
+
+
+					h2 {
+						padding: 10px;
+						border-bottom: solid 1px $grey-purple;
+						margin-bottom: 0px;
+					}
+
+					p {
+						border-bottom: solid 1px $grey-purple;
+						padding: 10px;
+						font-size: 12px;
+						background-color: #eee;
+						margin: 0px;
+					}
+			}
+		
+		}	
+}/* end of widget-notice*/
+
+
+.alert  div {
+	@include flexBox(flex, row, nowrap);
+	justify-content: space-between;
+	background-color: $faded-indigo;
+	color: $white;
+	padding:10px;
+	border-radius: 5px;
+	margin: 10px;
+
+	
+	
+	span:first-child {
+		color: $white;
+		font-size: .75em;		
+		line-height: 20px;
+		&:hover {
+			text-decoration:none;
+		}
+	}
+
+	span:nth-child(2) {
+		
+		font-size:20px;
+		padding-left:20px;
+		cursor: pointer;
+
+
+	}
+
+}
+
+.time {
+	ul {
+		@include flexBox(flex, row, wrap);
+		
+		justify-content: space-between;
+		font-size:.75em;
+		margin-bottom:20px;
+
+		li {
+			padding:5px 10px;
+
+			&:hover{			
+			background-color: $green;
+			border-radius: 10px;			
+			color: $white;
+			}
+		}		
+
+		
+	}
+
+}
+
+
+.new-members-list {
+	p{
+		padding: 0px;
+	}
+
+	a {
+		font-size:14px;
+		color:$faded-indigo;
+	}
+
+
+
+
+}
+
+.social {
+
+	li {
+		@extend %clearfix;
+		margin-bottom:10px;
+		padding: 10px;
+		border: solid $grey-purple 1px;
+		color: #fff;
+
+
+		svg {
+			float: left;	
+			@extend %clearfix;
+			
+		}
+
+		div{					
+
+			padding-left: 20px;	
+			display: inline-block;
+		}
+
+		span {
+			display: block;
+
+		}
+
+		span:first-child{
+			font-size:18px;
+			color:$faded-indigo;
+			font-weight: bold;
+		}
+
+		span:nth-child(2){
+			font-size:50px;
+			color: $grey-black;
+		}
+	}
+
+
+
+
+
+	
+}
+
+footer {
+	height: 100px;
+}
+
+
+
+.members-new {
+
+	@extend %clearfix;
+	margin-bottom: 10px;
+
+	img {
+		float:left;
+		padding-left: 10px;
+		display: inline-block;
+	}
+
+	p{
+		margin-bottom:0px;
+	}
+
+	div {
+		float: right;
+		font-size: 12px;
+		color: $grey-purple;
+	}
+
+}
+
+
+.messages {
+
+	div{
+
+		@extend %clearfix;
+		margin-bottom: 10px;
+
+
+		img {
+			float:left;
+			padding-left: 10px;
+			display: inline-block;
+		}
+
+		p{
+			margin:0px;
+			font-size:12px;
+			color:$grey-black;
+		}
+
+		div {
+			float: right;
+			color: $faded-indigo;
+			font-size:20px;
+			padding-left: 20px;
+			margin-top:-35px;
+
+		}
+	}
+
+}
+
+.new-members-list, .messages , .social, .mobileusers, .dailytraffic, .traffic{
+
+	border-bottom:  1px  solid $grey-purple;
+
+}
+
+
+#enteredList {
+	z-index:1;
+}
+
+
+
