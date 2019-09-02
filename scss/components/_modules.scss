@@ -1,5 +1,5 @@
 section{
-	@extend %clearfix;
+	/*@extend %clearfix;*/
 
 }
 
@@ -26,15 +26,15 @@ section{
 		}
 		
 		div:nth-child(2){
-			@include flexBox(flex, row, wrap) {
-				justify-content: space-around;
+			@include flexBox(flex, row, nowrap) {
+				/*justify-content: space-around;*/
 			}
 			background-color: #eee;		
 			border-bottom: 1px solid $grey-purple;
 			padding:10px;
 			order: 1;
 			width: 100%;
-			position:relative;
+			
 			@include mq (medium){
 				order:2;
 				max-width: calc(100vw - 134px);
@@ -53,6 +53,7 @@ section{
 				color: $grey-purple;
 				padding: 10px;
 				position: relative;
+				
 				@include mq(medium){
 					width: 80%;
 
@@ -226,7 +227,7 @@ section{
 }
 
 footer {
-	height: 100px;
+	height: 10px;
 }
 
 
@@ -290,9 +291,14 @@ footer {
 .new-members-list, .messages , .social, .mobileusers, .dailytraffic, .traffic{
 
 	border-bottom:  1px  solid $grey-purple;
+	padding: 10px;
 
 }
 
+.messages , .social, .mobileusers, .dailytraffic, .traffic {
+
+	width: 100vw;
+}
 
 #enteredList {
 	z-index:1;

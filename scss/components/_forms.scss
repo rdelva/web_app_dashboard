@@ -1,6 +1,7 @@
 
 
 .message-form {
+	padding:10px;
 	[type='text'] {
 		display:block;
 		width:100%;
@@ -31,6 +32,12 @@
 		border-radius: 5px;
 		padding:10px;
 	}
+
+}
+
+#settings {
+		padding:10px;
+
 }
 
 fieldset {

@@ -108,16 +108,18 @@ li svg {
 	&-icon {
 		width: 30px;
   		height: 30px;
-  		position: relative;
-  		right: -135px;
-  		top:-32px;
+  		position: absolute;
+  		top:145px;	 
+  		right:10px; 		
   		background: url('../icons/icon-search.svg');
   		background-size: 25px 25px;
-  		background-repeat:no-repeat;
-  		@include mq(medium){
-  			position: absolute;
-  			right: 30px;
-  			top: 8px;
+  		background-repeat:no-repeat;  
+
+  		@include mq(large){
+  			top: 95px;	 
+  			 
   		}
+
+
 	}
 }
