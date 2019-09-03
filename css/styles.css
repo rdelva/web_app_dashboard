@@ -579,7 +579,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-size: 0.75em;
   margin-bottom: 20px;
 }

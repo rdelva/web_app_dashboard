@@ -143,9 +143,11 @@ section{
 
 .time {
 	ul {
-		@include flexBox(flex, row, wrap);
+		@include flexBox(flex, row, wrap) {
+			justify-content: flex-end;
+		}
 		
-		justify-content: space-between;
+		
 		font-size:.75em;
 		margin-bottom:20px;
 
