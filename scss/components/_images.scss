@@ -109,15 +109,18 @@ li svg {
 		width: 30px;
   		height: 30px;
   		position: absolute;
-  		top:145px;	 
+  		top:155px;	 
   		right:10px; 		
   		background: url('../icons/icon-search.svg');
   		background-size: 25px 25px;
   		background-repeat:no-repeat;  
 
+  		@include mq(medium){
+  			top: 95px;	   			 
+  		}
+
   		@include mq(large){
-  			top: 95px;	 
-  			 
+  			top: 95px;	   			 
   		}
 
 

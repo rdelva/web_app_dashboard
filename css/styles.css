@@ -734,7 +734,7 @@ header {
 }
 
 nav {
-  height: 50px;
+  height: 60px;
   background-color: #4d4c72;
   color: #fff;
   display: flex;
@@ -875,11 +875,16 @@ li svg {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 145px;
+  top: 155px;
   right: 10px;
   background: url("../icons/icon-search.svg");
   background-size: 25px 25px;
   background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  #search-icon {
+    top: 95px;
+  }
 }
 @media (min-width: 1400px) {
   #search-icon {
