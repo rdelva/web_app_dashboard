@@ -593,6 +593,11 @@ section {
   border-radius: 10px;
   color: #fff;
 }
+.time .selected {
+  background-color: #81c98f;
+  border-radius: 10px;
+  color: #fff;
+}
 
 .new-members-list p {
   padding: 0px;
@@ -675,10 +680,11 @@ footer {
   padding: 10px;
 }
 
-.messages, .social, .mobileusers, .dailytraffic, .traffic {
-  width: 100vw;
-}
+/*
+.messages , .social, .mobileusers, .dailytraffic, .traffic {
 
+	width: 100vw;
+}*/
 #enteredList {
   z-index: 1;
 }

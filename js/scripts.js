@@ -36,6 +36,29 @@ $(bell).click(function (){
 });
 
 
+
+function timeNav(){
+  //default link is on Weekly
+  weekly = document.querySelector('#Weekly'); 
+  weekly.classList.add('selected');
+
+  timeMenu = document.querySelector('.time ul');  
+  timeMenuList = timeMenu.getElementsByTagName('li');
+  
+  timeMenu.addEventListener('click', function(e) {
+    //removes the current link outside of the loop selects the new link you've chosen
+    if(e.target.tagName == 'LI'){
+      for(i=0; i <= timeMenuList.length; i++){
+        if(document.getElementsByTagName('LI')[i].className == 'selected'){
+          timeMenuList[i].classList.remove('selected');          
+        }
+      }
+      e.target.classList.add('selected');
+    }
+  });
+
+}// end of timeNav()
+
 function monthlyTraffic(){
 
     var ctx = document.getElementById('monthlyChart');
@@ -73,7 +96,9 @@ var myChart = new Chart(ctx, {
 
     options: {
 
-      responsive:true, 
+     responsive:true,
+      maintainAspectRatio: true,
+      aspectRatio: 2,
       legend: {
           position: 'bottom',
         },
@@ -186,6 +211,8 @@ var myChart = new Chart(ctx, {
 
     options: {
       responsive:true,
+      maintainAspectRatio: false,
+      aspectRatio: 2,
             legend: {
             display: false
           },
@@ -235,7 +262,9 @@ function dailyTraffic (){
     },
 
     options: {
-      responsive: true,
+      responsive:true,
+      maintainAspectRatio: true,
+      aspectRatio: 2,
       legend: {
           display: false
       },
@@ -285,7 +314,9 @@ var myChart = new Chart(ctx, {
 
     options: {
 
-      responsive:true, 
+      responsive:true,
+      maintainAspectRatio: true,
+      aspectRatio: 2,
       legend: {
           position: 'right',
         },
@@ -326,6 +357,8 @@ function selectChart(){
         const barchart = document.getElementById('bar-chart');
         const weeklyChart = document.getElementById('weeklyChart');
 
+  
+
 
     const canvas = document.createElement('canvas');
     
@@ -334,17 +367,20 @@ function selectChart(){
                weeklyChart.style.display = 'none';
                monthlyChart.style.display = 'none';
 
+
+
     time.addEventListener('click', (e) => {
           const cdisplay = document.getElementById('chart_display');
 
-
       if(e.target.tagName == 'LI') {
 
-          if(e.target.id == 'Hourly' ){
+          if(e.target.id == 'Hourly' ){             
                hourlyChart.style.display = 'block';
                dailyChart.style.display = 'none';
                weeklyChart.style.display = 'none';
                monthlyChart.style.display = 'none';
+
+             
 
           } else if(e.target.id == 'Daily'){
               hourlyChart.style.display = 'none';
@@ -447,6 +483,7 @@ function submitted() {
   alert('Form is submitted');
 }
 
+timeNav();
 traffic();
 dailyTraffic();
 dailyTraffic2();
