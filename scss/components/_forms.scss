@@ -19,7 +19,8 @@
 		font-size: .75em;
 		background-color: #fbfbfb;
 		border-radius: 5px;
-		margin-bottom:20px;
+		margin-bottom:10px;
+		height:120px;
 
 
 	}
@@ -30,7 +31,7 @@
 		color: $white;
 		border:none;
 		border-radius: 5px;
-		padding:10px;
+		@extend %btn;
 	}
 
 }
@@ -50,13 +51,14 @@ fieldset {
 		color: $grey-black;	
 		font-size: .75em;
 		margin-bottom:20px;
+		@include flexBox(flex, row, nowrap);
 	}
 
 	select  {
 		color: $grey-black;
 		font-size: .75em;
 		padding: 10px;
-		margin: 10px 0;
+		margin: 10px 0 40px 0;
 		width: 100%;	
 		max-width:100%;
 	}

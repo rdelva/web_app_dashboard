@@ -5,7 +5,7 @@
   clear: both;
 }
 
-fieldset .menu-buttons .btn--cancel, fieldset .menu-buttons .btn--default {
+fieldset .menu-buttons .btn--cancel, fieldset .menu-buttons .btn--default, .message-form [type=submit] {
   color: #fff;
   border: none;
   text-transform: uppercase;
@@ -612,6 +612,11 @@ section {
   }
 }
 
+@media (min-width: 768px) {
+  .new-members-list {
+    border-right: 1px solid #b2b2b2;
+  }
+}
 .new-members-list p {
   padding: 0px;
 }
@@ -628,11 +633,22 @@ section {
     justify-content: space-between;
   }
 }
+@media (min-width: 768px) {
+  .social li:nth-child(2) {
+    margin: 0 10px;
+  }
+}
 .social li {
   margin-bottom: 10px;
   padding: 10px;
   border: solid #b2b2b2 1px;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .social li {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
 }
 .social li svg {
   float: left;
@@ -694,6 +710,12 @@ footer {
   font-size: 20px;
   padding-left: 20px;
   margin-top: -35px;
+}
+
+@media (min-width: 768px) {
+  .message-form {
+    border-right: 1px solid #b2b2b2;
+  }
 }
 
 .new-members-list, .messages, .social, .mobileusers, .dailytraffic, .traffic {
@@ -940,7 +962,8 @@ li svg {
   font-size: 0.75em;
   background-color: #fbfbfb;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  height: 120px;
 }
 .message-form [type=submit] {
   background-color: #7477bf;
@@ -948,7 +971,6 @@ li svg {
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px;
 }
 
 #settings {
@@ -963,12 +985,15 @@ fieldset label {
   color: #676666;
   font-size: 0.75em;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 fieldset select {
   color: #676666;
   font-size: 0.75em;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 0 40px 0;
   width: 100%;
   max-width: 100%;
 }

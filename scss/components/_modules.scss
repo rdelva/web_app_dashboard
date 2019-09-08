@@ -189,6 +189,10 @@ section{
 
 
 .new-members-list {
+	@include mq(medium){
+		border-right: 1px solid $grey-purple;
+
+	}
 	p{
 		padding: 0px;
 	}
@@ -214,10 +218,21 @@ section{
 		}
 	}
 	
-
-	li {
+	li:nth-child(2)	{
+		@include mq(medium){
+				margin:0 10px;
+					
+		}
 
 		
+	}
+	li {
+
+		@include mq(medium){
+			flex-grow: 1;
+			margin-bottom:0;
+					
+		}
 
 		@extend %clearfix;
 		margin-bottom:10px;
@@ -269,6 +284,7 @@ footer {
 
 
 .members-new {
+
 
 	@extend %clearfix;
 	margin-bottom: 10px;
@@ -322,6 +338,14 @@ footer {
 		}
 	}
 
+}
+
+.message-form {
+
+	@include mq(medium){
+		border-right: 1px solid $grey-purple;
+
+	}
 }
 
 .new-members-list, .messages , .social, .mobileusers, .dailytraffic, .traffic{
