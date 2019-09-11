@@ -463,7 +463,7 @@ function setResults(){
   let publicSetting = document.getElementById('public-profile');
   let timezone = document.getElementById('timezone');
     
-     email = localStorage.getItem('email', email.checked);
+     email = localStorage.getItem('email');
      publicSetting.checked = localStorage.getItem('profile');
      timezone.value = localStorage.getItem('timezone');
      
