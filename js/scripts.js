@@ -459,11 +459,11 @@ window.onload = function (){
 function setResults(){
 
 
-  const email = document.getElementById('email-notice');
-  const publicSetting = document.getElementById('public-profile');
-  const timezone = document.getElementById('timezone');
+  let email = document.getElementById('email-notice');
+  let publicSetting = document.getElementById('public-profile');
+  let timezone = document.getElementById('timezone');
     
-     email.checked = localStorage.getItem('email');
+     email = localStorage.getItem('email', email.checked);
      publicSetting.checked = localStorage.getItem('profile');
      timezone.value = localStorage.getItem('timezone');
      
