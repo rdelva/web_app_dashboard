@@ -442,13 +442,31 @@ window.onload = function (){
       let profileSetting = publicSetting.checked;
       let timeSetup = timezone.value;
 
-      //Store the values in Local Storage
-      localStorage.setItem('email', emailSetting);
-      localStorage.setItem('profile', profileSetting);
-      localStorage.setItem('timezone', timeSetup);
-    
+      if(e.target.id === 'save'){
+
+          //Store the values in Local Storage
+        localStorage.setItem('email', emailSetting);
+        localStorage.setItem('profile', profileSetting);
+        localStorage.setItem('timezone', timeSetup);
+
+      } else {
+        //Resets the values if the cancel button was pressed
+          localStorage.removeItem('email', emailSetting);
+          localStorage.removeItem('profile', profileSetting);
+          localStorage.removeItem('timezone', timeSetup);
+
+
+
+      }
+
       
+
+      window.alert("Settings saved sucessfully.");
+         
     });
+
+
+
 
   }
 }// end of window.onload()
