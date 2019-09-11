@@ -427,10 +427,10 @@ function supportsLocalStorage() {
 window.onload = function (){
   if(supportsLocalStorage){
   
-    let settings  = document.getElementById('settings');
-    let emailNotice = document.getElementById('email-notice');
-    let publicSetting = document.getElementById('public-profile');
-    let timezone = document.getElementById('timezone');
+    const settings  = document.getElementById('settings');
+    const emailNotice = document.getElementById('email-notice');
+    const publicSetting = document.getElementById('public-profile');
+    const timezone = document.getElementById('timezone');
     
    
     const save = document.getElementById('save');
@@ -438,7 +438,7 @@ window.onload = function (){
 
     settings.addEventListener('submit', function(e) {
       e.preventDefault();
-      let emailSetting = emailNotice.checked;
+      let  emailSetting = emailNotice.checked;
       let profileSetting = publicSetting.checked;
       let timeSetup = timezone.value;
 
@@ -455,24 +455,13 @@ window.onload = function (){
 
 
 
-/*
-function getResults(emailSetting, profileSetting, timeSetting){
-
-  localStorage.setItem('email', emailSetting);
-  localStorage.setItem('profile', profileSetting);
-  localStorage.setItem('timezone', timeSetting);
- 
-let storageList = localStorage;
-setResults(storageList);
-
-} */
 
 function setResults(){
 
 
-  let email = document.getElementById('email-notice');
-  let publicSetting = document.getElementById('public-profile');
-  let timezone = document.getElementById('timezone');
+  const email = document.getElementById('email-notice');
+  const publicSetting = document.getElementById('public-profile');
+  const timezone = document.getElementById('timezone');
     
      email.checked = localStorage.getItem('email');
      publicSetting.checked = localStorage.getItem('profile');
