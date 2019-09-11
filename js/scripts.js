@@ -447,21 +447,7 @@ window.onload = function (){
       localStorage.setItem('profile', profileSetting);
       localStorage.setItem('timezone', timeSetup);
     
-      //Retrieve the values and assign it to values
-
-      let email = document.getElementById('email-notice');
-      let profileSetup = document.getElementById('public-profile');
-      let timezoneSetting = document.getElementById('timezone');
-
-      email.checked = localStorage.getItem('email');
-      profileSetup.checked = localStorage.getItem('profile');
-      timeSetup.value = localStorage.getItem('timezone');
-
-
-    
-  
-
-   
+      setResults();
     });
 
   }
@@ -479,7 +465,7 @@ function getResults(emailSetting, profileSetting, timeSetting){
 let storageList = localStorage;
 setResults(storageList);
 
-}
+} */
 
 function setResults(){
 
@@ -491,10 +477,10 @@ function setResults(){
      email.checked = localStorage.getItem('email');
      publicSetting.checked = localStorage.getItem('profile');
      timezone.value = localStorage.getItem('timezone');
-     console.log(timezone.value);
+     
 
 }
-*/
+
 
 //Checks if Username and Message was entered.
 function messageUsers(){
@@ -525,8 +511,8 @@ function messageUsers(){
 
 
 /*
-getResults();
-setResults();*/
+getResults();*/
+setResults();
 usersettings();
 messageUsers();
 timeNav();
