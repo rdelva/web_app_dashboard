@@ -10,17 +10,7 @@ const notice = document.querySelector('#widget-notice div');
 
 
 
-/*
-  $(menu).show();
 
-
-
-$('.menu-btn').click( function(){
-	
-	$(menu).slideToggle();
-	
-});
-*/
 
 $(close).click(function(){
  
@@ -410,6 +400,17 @@ function selectChart(){
 
 }
 
+function usersettings(){
+      /*let emailNotice = document.getElementById('email-notice');
+      console.log(emailNotice.checked);
+      let publicProfile = document.getElementById('public-profile');
+      console.log(emailNotice.checked);
+      let timezone = document.getElementById('timezone');
+      console.log(timezone);*/
+}
+
+
+
 
 function supportsLocalStorage() {
   'use strict';
@@ -423,43 +424,28 @@ function supportsLocalStorage() {
 
 
 
-
-
-
-
-
 window.onload = function (){
   if(supportsLocalStorage){
-    let messenger =  document.getElementById('messenger');
-    let enteredList = document.getElementById('enteredList');
-    let searchUser = document.getElementById('search-user');
-    let message = document.getElementById('message');
-    const submit = document.getElementById('submit');
-
-    let emailNotice = document.getElementById('email-notice');
-    let publicProfile = document.getElementById('public-profile');
-    let timezoneSet = document.getElementById('timeZone');
-    let settings  = document.getElementById('settings');
-    const saveSettings = document.getElementById('save-settings');
-    const reset = document.getElementById('reset');
-
-
-    //Initialize display list
   
-    messenger.addEventListener('submit', function(e) {
-      e.preventDefault();
+    let settings  = document.getElementById('settings');
+    let emailNotice = document.getElementById('email-notice');
+    let publicSetting = document.getElementById('public-profile');
+    let timezone = document.getElementById('timezone');
+    
    
-    });
+    const save = document.getElementById('save');
+    const reset = document.getElementById('reset');
 
     settings.addEventListener('submit', function(e) {
       e.preventDefault();
-      let emailNotice = document.getElementById('email-notice');
+      let emailSetting = emailNotice.checked;
+      let profileSetting = publicSetting.checked;
+      let timeSetting = timezone.value;
+    
 
-      if(emailNotice.checked){
-        console.log("It's true");
-      } else {
-        console.log("It's false");
-      }
+      getResults(emailSetting, profileSetting, timeSetting);
+    
+  
 
    
     });
@@ -467,22 +453,55 @@ window.onload = function (){
   }
 }// end of window.onload()
 
-function getResults(){
-
-  var lclTimezoneSet = localStorage.getItem('timezoneSet');
 
 
+
+function getResults(emailSetting, profileSetting, timeSetting){
+
+  localStorage.setItem('email', emailSetting);
+  localStorage.setItem('profile', profileSetting);
+  localStorage.setItem('timezone', timeSetting);
+ 
+}
+
+function setResults(){
+    localStorage.getItem(email);
 }
 
 
+//Checks if Username and Message was entered.
+function messageUsers(){
+
+ const messenger = document.getElementById('messenger');
+
+  messenger.addEventListener('submit', function(e){
+    e.preventDefault();
+    const user = document.getElementById('search-user');
+    const message = document.getElementById('message');
+    const sendMessage = document.getElementById('submit');
+
+  if(user.value === '' && message.value === ''){
+    window.alert('Please fill out the user and message fields before sending.');
+  } else if(user.value === ""){
+    window.alert('Please fill out user field before sending.');
+  } else if(message.value === ""){
+    window.alert('Please fill out message field before sending.');
+  } else {
+    window.alert(`Message sucessfully sent to: ${user.value}`);
+  }
+
+
+});
+  
+ 
+}// end of messageUsers
 
 
 
 
-function submitted() {
-  alert('Form is submitted');
-}
-
+setResults();
+usersettings();
+messageUsers();
 timeNav();
 traffic();
 dailyTraffic();
