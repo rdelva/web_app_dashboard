@@ -643,6 +643,8 @@ section {
   padding: 10px;
   border: solid #b2b2b2 1px;
   color: #fff;
+  background-color: #fbfbfb;
+  border-radius: 5px;
 }
 @media (min-width: 768px) {
   .social li {
@@ -676,6 +678,7 @@ footer {
 
 .members-new {
   margin-bottom: 10px;
+  border-bottom: solid 1px #e9e9e9;
 }
 .members-new img {
   float: left;
@@ -693,6 +696,7 @@ footer {
 
 .messages div {
   margin-bottom: 10px;
+  border-bottom: solid 1px #e9e9e9;
 }
 .messages div img {
   float: left;

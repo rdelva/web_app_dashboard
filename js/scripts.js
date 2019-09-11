@@ -437,7 +437,7 @@ window.onload = function (){
     const reset = document.getElementById('reset');
 
     settings.addEventListener('submit', function(e) {
-      e.preventDefault();
+   
       let  emailSetting = emailNotice.checked;
       let profileSetting = publicSetting.checked;
       let timeSetup = timezone.value;
@@ -447,7 +447,7 @@ window.onload = function (){
       localStorage.setItem('profile', profileSetting);
       localStorage.setItem('timezone', timeSetup);
     
-      setResults();
+      
     });
 
   }
@@ -464,7 +464,7 @@ function setResults(){
   let timezone = document.getElementById('timezone');
     
      email = localStorage.getItem('email');
-     publicSetting.checked = localStorage.getItem('profile');
+     publicSetting = localStorage.getItem('profile');
      timezone.value = localStorage.getItem('timezone');
      
 
