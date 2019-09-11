@@ -440,10 +440,24 @@ window.onload = function (){
       e.preventDefault();
       let emailSetting = emailNotice.checked;
       let profileSetting = publicSetting.checked;
-      let timeSetting = timezone.value;
-    
+      let timeSetup = timezone.value;
 
-      getResults(emailSetting, profileSetting, timeSetting);
+      //Store the values in Local Storage
+      localStorage.setItem('email', emailSetting);
+      localStorage.setItem('profile', profileSetting);
+      localStorage.setItem('timezone', timeSetup);
+    
+      //Retrieve the values and assign it to values
+
+      let email = document.getElementById('email-notice');
+      let profileSetup = document.getElementById('public-profile');
+      let timezoneSetting = document.getElementById('timezone');
+
+      email.checked = localStorage.getItem('email');
+      profileSetup.checked = localStorage.getItem('profile');
+      timeSetup.value = localStorage.getItem('timezone');
+
+
     
   
 
@@ -455,19 +469,32 @@ window.onload = function (){
 
 
 
-
+/*
 function getResults(emailSetting, profileSetting, timeSetting){
 
   localStorage.setItem('email', emailSetting);
   localStorage.setItem('profile', profileSetting);
   localStorage.setItem('timezone', timeSetting);
  
+let storageList = localStorage;
+setResults(storageList);
+
 }
 
 function setResults(){
-    localStorage.getItem(email);
-}
 
+
+  let email = document.getElementById('email-notice');
+  let publicSetting = document.getElementById('public-profile');
+  let timezone = document.getElementById('timezone');
+    
+     email.checked = localStorage.getItem('email');
+     publicSetting.checked = localStorage.getItem('profile');
+     timezone.value = localStorage.getItem('timezone');
+     console.log(timezone.value);
+
+}
+*/
 
 //Checks if Username and Message was entered.
 function messageUsers(){
@@ -497,9 +524,9 @@ function messageUsers(){
 }// end of messageUsers
 
 
-
-
-setResults();
+/*
+getResults();
+setResults();*/
 usersettings();
 messageUsers();
 timeNav();
