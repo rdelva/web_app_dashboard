@@ -432,23 +432,35 @@ window.onload = function (){
   let timezone = document.getElementById('timezone');
 
 
-     localStorage.getItem('email');
-     localStorage.getItem('profile');
-     localStorage.getItem('timezone');
+     let emailSetting = localStorage.getItem('email');
+     console.log(emailSetting);
+     let profileSetting = localStorage.getItem('profile');
+     console.log(profileSetting);
+     let tzSetting = localStorage.getItem('timezone');
+     console.log(tzSetting);
 
-     if(localStorage.email == true){
-      email.checked =  localStorage.getItem('email');
+     if( emailSetting == 'true'){
+      email.checked =  true;
+      console.log("on");
      } else {
-       email.checked =  localStorage.getItem('email')
+       email.checked =  false;
+       console.log("turn off");
      }
      
-     if(localStorage.profile == true){
-      publicSetting.checked = localStorage.getItem('profile');
+     if(profileSetting == 'true'){
+      publicSetting.checked = true;
      } else {
-         publicSetting.checked = localStorage.getItem('profile');
+         publicSetting.checked = false;
      }
    
-     timezone.value = localStorage.timezone;
+     if(tzSetting == null){
+       timezone.selectedIndex = 0;
+          
+     } else {
+         
+          timezone.value = localStorage.timezone;
+     }
+    
        
 
 
