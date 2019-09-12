@@ -426,46 +426,30 @@ function supportsLocalStorage() {
 
 window.onload = function (){
   if(supportsLocalStorage){
-  
-    const settings  = document.getElementById('settings');
-    const emailNotice = document.getElementById('email-notice');
-    const publicSetting = document.getElementById('public-profile');
-    const timezone = document.getElementById('timezone');
-    
+ 
+  let email = document.getElementById('email-notice');
+  let publicSetting = document.getElementById('public-profile');
+  let timezone = document.getElementById('timezone');
+
+
+     localStorage.getItem('email');
+     localStorage.getItem('profile');
+     localStorage.getItem('timezone');
+
+     if(localStorage.email == true){
+      email.checked =  localStorage.getItem('email');
+     } else {
+       email.checked =  localStorage.getItem('email')
+     }
+     
+     if(localStorage.profile == true){
+      publicSetting.checked = localStorage.getItem('profile');
+     } else {
+         publicSetting.checked = localStorage.getItem('profile');
+     }
    
-    const save = document.getElementById('save');
-    const reset = document.getElementById('reset');
-
-    settings.addEventListener('submit', function(e) {
-   
-      let  emailSetting = emailNotice.checked;
-      let profileSetting = publicSetting.checked;
-      let timeSetup = timezone.value;
-
-      if(e.target.id === 'save'){
-
-          //Store the values in Local Storage
-        localStorage.setItem('email', emailSetting);
-        localStorage.setItem('profile', profileSetting);
-        localStorage.setItem('timezone', timeSetup);
-
-      } else {
-        //Resets the values if the cancel button was pressed
-          localStorage.removeItem('email', emailSetting);
-          localStorage.removeItem('profile', profileSetting);
-          localStorage.removeItem('timezone', timeSetup);
-
-
-
-      }
-
-      
-
-      window.alert("Settings saved sucessfully.");
-         
-    });
-
-
+     timezone.value = localStorage.timezone;
+       
 
 
   }
@@ -474,19 +458,63 @@ window.onload = function (){
 
 
 
-function setResults(){
 
+//Select the save button amd pushes value into local storage
 
-  let email = document.getElementById('email-notice');
-  let publicSetting = document.getElementById('public-profile');
-  let timezone = document.getElementById('timezone');
+function saveSettings(){
     
-     email = localStorage.getItem('email');
-     publicSetting = localStorage.getItem('profile');
-     timezone.value = localStorage.getItem('timezone');
+    const save = document.getElementById('save');
+
+
+    save.addEventListener('click', function(event){
+
+      event.preventDefault();
+    let email = document.getElementById('email-notice');
+    let publicSetting = document.getElementById('public-profile');
+    let timezone = document.getElementById('timezone');
+
+     localStorage.setItem('email', email.checked);
+     localStorage.setItem('profile', publicSetting.checked);
+      localStorage.setItem('timezone', timezone.value);
+
+      window.alert('Settings saved sucessfully');
+
+
+    });
+
+}// end saveSettings();
+
+
+//Select the cancel removes value into local storage
+
+function removeSettings(){
+    
+    const cancel = document.getElementById('cancel');
+
+
+    cancel.addEventListener('click', function(event){
+
+      event.preventDefault();
+    let email = document.getElementById('email-notice');
+    let publicSetting = document.getElementById('public-profile');
+    let timezone = document.getElementById('timezone');
+
+     localStorage.removeItem('email');
+     localStorage.removeItem('profile');
+      localStorage.removeItem('timezone');
+
+      window.alert('Canceled Settings');
+
+
+    });
+
+}// end saveSettings();
+
      
 
-}
+
+
+
 
 
 //Checks if Username and Message was entered.
@@ -519,7 +547,8 @@ function messageUsers(){
 
 /*
 getResults();*/
-setResults();
+saveSettings();
+removeSettings();
 usersettings();
 messageUsers();
 timeNav();
