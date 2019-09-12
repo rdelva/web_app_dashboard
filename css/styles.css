@@ -589,9 +589,10 @@ section {
   color: #676666;
 }
 .time ul li:hover {
-  background-color: #81c98f;
+  background-color: #fff;
   border-radius: 10px;
-  color: #fff;
+  border: 1px solid #81c98f;
+  color: #676666;
 }
 .time .selected {
   background-color: #81c98f;

@@ -157,9 +157,10 @@ section{
 			color: $grey-black;
 
 			&:hover{			
-			background-color: $green;
-			border-radius: 10px;			
-			color: $white;
+			background-color: $white;
+			border-radius: 10px;	
+			border: 1px solid $green;		
+			color: $grey-black;
 			}
 		}		
 

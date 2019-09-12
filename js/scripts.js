@@ -352,9 +352,9 @@ function selectChart(){
 
     const canvas = document.createElement('canvas');
     
-     hourlyChart.style.display = 'block';
+     hourlyChart.style.display = 'none';
                dailyChart.style.display = 'none';
-               weeklyChart.style.display = 'none';
+               weeklyChart.style.display = 'block';
                monthlyChart.style.display = 'none';
 
 
@@ -400,14 +400,6 @@ function selectChart(){
 
 }
 
-function usersettings(){
-      /*let emailNotice = document.getElementById('email-notice');
-      console.log(emailNotice.checked);
-      let publicProfile = document.getElementById('public-profile');
-      console.log(emailNotice.checked);
-      let timezone = document.getElementById('timezone');
-      console.log(timezone);*/
-}
 
 
 
@@ -557,11 +549,9 @@ function messageUsers(){
 }// end of messageUsers
 
 
-/*
-getResults();*/
+
 saveSettings();
 removeSettings();
-usersettings();
 messageUsers();
 timeNav();
 traffic();
