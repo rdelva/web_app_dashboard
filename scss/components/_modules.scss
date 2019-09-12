@@ -183,6 +183,8 @@ section{
 	section {
 		@include mq(medium){
 			width:50%;
+
+
 		}
 	}
 	
@@ -345,7 +347,7 @@ footer {
 
 }
 
-.message-form {
+.message-form, .dailytraffic {
 
 	@include mq(medium){
 		border-right: 1px solid $grey-purple;

@@ -718,7 +718,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .message-form {
+  .message-form, .dailytraffic {
     border-right: 1px solid #b2b2b2;
   }
 }
