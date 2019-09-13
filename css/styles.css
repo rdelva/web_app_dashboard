@@ -812,14 +812,14 @@ nav {
   }
 }
 nav a {
-  color: #fff;
+  color: #9998ae;
   text-decoration: none;
-  padding: 20px 10px;
+  /*padding:20px 10px;*/
 }
 nav a:hover {
   border-bottom: 3px solid #fff;
   text-decoration: none;
-  background-color: #b2b2b2;
+  color: #9998ae;
 }
 @media (min-width: 768px) {
   nav a:hover {
@@ -837,12 +837,21 @@ nav a span {
   fill: currentColor;
 }
 
-.facebook, .twitter, .google, .dashboard {
+.facebook, .twitter, .google {
   fill: currentColor;
 }
 
 .icons {
   display: none;
+}
+
+.navColor {
+  color: #fff;
+  fill: currentColor;
+}
+
+.dashboard, .members, .visits, .settings {
+  fill: currentColor;
 }
 
 .header-icons {
@@ -901,12 +910,13 @@ nav a span {
   }
 }
 
-nav img {
-  width: 30px;
+nav svg {
+  width: 35px;
+  height: 35px;
   padding-right: 2px;
 }
 @media (min-width: 768px) {
-  nav img {
+  nav svg {
     padding-right: 0px;
   }
 }

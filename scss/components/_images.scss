@@ -3,12 +3,21 @@
 	color: $white;
 	fill: currentColor;
 }
-.facebook, .twitter, .google,.dashboard{
+.facebook, .twitter, .google {
 	fill: currentColor;
 }
 
 .icons {
 	display:none;
+}
+
+.navColor{
+	color: $white;
+	fill: currentColor;
+}
+
+.dashboard, .members, .visits, .settings {
+	fill: currentColor;
 }
 
 
@@ -76,8 +85,9 @@
 }
 
 
-nav img {
-	width:30px;
+nav svg {
+	width:35px;
+	height:35px;
 
 	padding-right: 2px;
 	@include mq(medium){
