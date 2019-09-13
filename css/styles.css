@@ -5,7 +5,7 @@
   clear: both;
 }
 
-fieldset .menu-buttons .btn--cancel, fieldset .menu-buttons .btn--default, .message-form [type=submit] {
+fieldset .menu-buttons .btn--cancel, fieldset .menu-buttons .btn--default, fieldset .menu-buttons .btn--save, .message-form [type=submit] {
   color: #fff;
   border: none;
   text-transform: uppercase;
@@ -1013,8 +1013,12 @@ fieldset .menu-buttons {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+fieldset .menu-buttons .btn--save {
+  background-color: #7477bf;
+  width: 45%;
+}
 fieldset .menu-buttons .btn--default {
-  background-color: #4d4c72;
+  background-color: #7477bf;
   width: 45%;
 }
 fieldset .menu-buttons .btn--cancel {
