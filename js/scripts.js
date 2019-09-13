@@ -423,6 +423,10 @@ window.onload = function (){
   let publicSetting = document.getElementById('public-profile');
   let timezone = document.getElementById('timezone');
 
+  
+
+
+
 
      let emailSetting = localStorage.getItem('email');
      console.log(emailSetting);
@@ -431,20 +435,24 @@ window.onload = function (){
      let tzSetting = localStorage.getItem('timezone');
      console.log(tzSetting);
 
-     if( emailSetting == 'true'){
-      email.checked =  true;
-      console.log("on");
+     if( emailSetting == null){
+      email.checked =  true;      
+     } else if ( emailSetting == 'true'){
+       email.checked =  true;       
      } else {
-       email.checked =  false;
-       console.log("turn off");
+        email.checked = false
+     }
+
+
+     if( profileSetting == null){
+      publicSetting.checked =  true;      
+     } else if ( profileSetting == 'true'){
+       publicSetting.checked =  true;       
+     } else {
+        publicSetting.checked = false
      }
      
-     if(profileSetting == 'true'){
-      publicSetting.checked = true;
-     } else {
-         publicSetting.checked = false;
-     }
-   
+     
      if(tzSetting == null){
        timezone.selectedIndex = 0;
           
@@ -460,7 +468,12 @@ window.onload = function (){
 }// end of window.onload()
 
 
-
+function defaultSettings(){
+    let email = document.getElementById('email-notice');
+  let publicSetting = document.getElementById('public-profile');
+   email.checked = true;
+    publicSetting.checked = true;
+}
 
 
 //Select the save button amd pushes value into local storage
