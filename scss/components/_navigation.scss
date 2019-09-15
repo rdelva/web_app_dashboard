@@ -58,12 +58,12 @@ nav {
 				
 				color: #9998ae;
 				text-decoration: none;
-				/*padding:20px 10px;*/
+				padding:20px 10px;
 
 				&:hover {
-					border-bottom:3px solid $white;
+					border-bottom:3px solid $green;
 					text-decoration: none;
-					color:#9998ae;
+					color:currentColor;
 					
 					@include mq(medium){
 						border-left: 5px solid $green;

@@ -680,6 +680,7 @@ footer {
 .members-new {
   margin-bottom: 10px;
   border-bottom: solid 1px #e9e9e9;
+  height: 50px;
 }
 .members-new img {
   float: left;
@@ -698,6 +699,7 @@ footer {
 .messages div {
   margin-bottom: 10px;
   border-bottom: solid 1px #e9e9e9;
+  height: 50px;
 }
 .messages div img {
   float: left;
@@ -814,12 +816,12 @@ nav {
 nav a {
   color: #9998ae;
   text-decoration: none;
-  /*padding:20px 10px;*/
+  padding: 20px 10px;
 }
 nav a:hover {
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #81c98f;
   text-decoration: none;
-  color: #9998ae;
+  color: currentColor;
 }
 @media (min-width: 768px) {
   nav a:hover {
