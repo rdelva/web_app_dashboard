@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-.messages div:after, .members-new:after, .social li svg:after, .social li:after {
+.members-messages:after, .members-new:after, .social li svg:after, .social li:after {
   content: "";
   display: table;
   clear: both;
@@ -678,9 +678,7 @@ footer {
 }
 
 .members-new {
-  margin-bottom: 10px;
-  border-bottom: solid 1px #e9e9e9;
-  height: 50px;
+  padding: 10px 0 10px 0;
 }
 .members-new img {
   float: left;
@@ -688,7 +686,8 @@ footer {
   display: inline-block;
 }
 .members-new p {
-  margin-bottom: 0px;
+  margin: 0;
+  padding: 0;
 }
 .members-new div {
   float: right;
@@ -696,27 +695,34 @@ footer {
   color: #b2b2b2;
 }
 
-.messages div {
-  margin-bottom: 10px;
-  border-bottom: solid 1px #e9e9e9;
-  height: 50px;
+.members-messages {
+  padding: 10px 0 10px 0;
 }
-.messages div img {
+.members-messages img {
   float: left;
   padding-left: 10px;
   display: inline-block;
 }
-.messages div p {
-  margin: 0px;
+.members-messages p {
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   color: #676666;
 }
-.messages div div {
+.members-messages div {
   float: right;
   color: #7477bf;
   font-size: 20px;
   padding-left: 20px;
-  margin-top: -35px;
+  margin-top: -20px;
+}
+
+.members-new:nth-child(2n), .members-messages:nth-child(2n) {
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.members-new:nth-child(3), .members-messages:nth-child(3) {
+  border-bottom: 1px solid #b2b2b2;
 }
 
 @media (min-width: 768px) {
