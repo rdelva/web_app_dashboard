@@ -52,55 +52,44 @@ const timeNav = () => {
 
 const hourlyTraffic = () => {
 
-let ctx = document.getElementById('hourlyChart').getContext('2d');
-let myChart = new Chart(ctx, {
-    type: 'bar',
+let ctx = document.getElementById('hourlyChart');
+ let myChart = new Chart(ctx, {
+    type: 'line',
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         datasets: [{
-            label: '# of Visitors (Millions)',
-            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-               
-               
-         
-            ],
+            label: '# of Visitors (Millions)',         
+            tension: 0,
+            radius : 6, 
+            pointBackgroundColor: 'rgba(255, 255, 255, 1 )',
+            backgroundColor : 'rgba(116, 119, 191, .2)',                         
+            data: [4, 2, 3, 5, 2, 3, 10, 15, 3, 5, 2, 3],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',    
-                      
-         
-
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
             ],
-            borderWidth: 1
+            borderWidth: 1// => hides the border in the label
         }]
     },
+
     options: {
-       responsive:true,
-      maintainAspectRatio: true,
+      responsive:true,
+      maintainAspectRatio: false,
       aspectRatio: 2,
+            legend: {
+            display: false
+          },
+
         scales: {
             yAxes: [{
                 ticks: {
@@ -110,6 +99,8 @@ let myChart = new Chart(ctx, {
         }
     }
 });
+
+
 
 }// end of hourlyTraffic
 
@@ -121,8 +112,53 @@ const monthlyTraffic = () => {
 
 
 let myChart = new Chart(ctx, {
-    type: 'pie',
-      data: {
+    type: 'line',
+    data: {
+          labels: ['Cars', 'Motorcycles', 'Bycicles', 'Buses'],  
+        datasets: [{
+            label: 'put it here', // => here
+            tension: 0,
+            radius : 6, 
+            pointBackgroundColor: 'rgba(255, 255, 255, 1 )',
+            backgroundColor : 'rgba(116, 119, 191, .2)',                         
+              data: [15, 10, 50, 25],
+            borderColor: [
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+               'rgba(116, 119, 191, 1)',
+            ],
+            borderWidth: 1// => hides the border in the label
+        }]
+    },
+
+    options: {
+      responsive:true,
+      maintainAspectRatio: false,
+      aspectRatio: 2,
+            legend: {
+            display: false
+          },
+
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    
+                }
+            }]
+        }
+    }
+});
+    /*  data: {
            datasets: [{
                     
             backgroundColor : [
@@ -182,7 +218,7 @@ let myChart = new Chart(ctx, {
             }]
         }
     }
-});
+});*/
 
 }
 
@@ -191,81 +227,64 @@ let myChart = new Chart(ctx, {
 const dailyTraffic2 = () => {
 
 // javascript
-    var ctx = document.getElementById('dailyChart');
+    let ctx = document.getElementById('dailyChart');
 
 
-var myChart = new Chart(ctx, {
-    type: 'polarArea',
-      data: {
-           datasets: [{
-                    
-            backgroundColor : [
-             'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-              
-            ],             
-            data: [15, 10, 50, 25,20,30,1],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
+let myChart = new Chart(ctx, {
+    type: 'line',
 
-            ],
-            borderWidth: 1
-        }],
-        labels: ['North America', 'South America', 'Asia', 'Africa', 'Australia','Antartica', 'Europe'],  
-    },
-
-    options: {
-
-     responsive:true,
-      maintainAspectRatio: true,
-      aspectRatio: 2,
-      legend: {
-          position: 'top',
+        data: {
+             labels: ['North America', 'South America', 'Asia', 'Africa', 'Australia','Antartica', 'Europe'],  
+            datasets: [{
+                label: 'put it here', // => here
+                tension: 0,
+                radius : 6, 
+                pointBackgroundColor: 'rgba(255, 255, 255, 1 )',
+                backgroundColor : 'rgba(116, 119, 191, .2)',                         
+                data: [15, 10, 50, 25,20,30,1],
+                borderColor: [
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                   'rgba(116, 119, 191, 1)',
+                ],
+                borderWidth: 1// => hides the border in the label
+            }]
         },
 
-        scales: {
-            xAxes: [{
-                gridLines: {
-                  display: false,
-                  drawBorder: false
-                },
-                 ticks: {
-                  display: false
+        options: {
+          responsive:true,
+          maintainAspectRatio: false,
+          aspectRatio: 2,
+                legend: {
+                display: false
+              },
 
-                }
-            }],
-            yAxes: [{
-               gridLines: {
-                  display: false,
-                  drawBorder: false
-                },
-                ticks: {
-                  display: false
-
-                }
-            }]
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
         }
-    }
-});
-
+    });
+     
 
 }
 
 
 const traffic = () => {
-	var ctx = document.getElementById('weeklyChart');
-var myChart = new Chart(ctx, {
+	let ctx = document.getElementById('weeklyChart');
+  let myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ['16-22', '23-29', '30-5', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
