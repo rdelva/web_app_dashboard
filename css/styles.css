@@ -673,11 +673,6 @@ footer {
   padding: 10px;
 }
 
-/*
-.messages , .social, .mobileusers, .dailytraffic, .traffic {
-
-	width: 100vw;
-}*/
 #enteredList {
   z-index: 1;
 }
