@@ -84,7 +84,7 @@ let ctx = document.getElementById('hourlyChart');
 
     options: {
       responsive:true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
       aspectRatio: 2,
             legend: {
             display: false
@@ -121,7 +121,7 @@ let myChart = new Chart(ctx, {
             radius : 6, 
             pointBackgroundColor: 'rgba(255, 255, 255, 1 )',
             backgroundColor : 'rgba(116, 119, 191, .2)',                         
-              data: [15, 10, 50, 25],
+              data: [35, 10, 15, 25],
             borderColor: [
                'rgba(116, 119, 191, 1)',
                'rgba(116, 119, 191, 1)',
@@ -142,7 +142,7 @@ let myChart = new Chart(ctx, {
 
     options: {
       responsive:true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
       aspectRatio: 2,
             legend: {
             display: false
@@ -158,67 +158,7 @@ let myChart = new Chart(ctx, {
         }
     }
 });
-    /*  data: {
-           datasets: [{
-                    
-            backgroundColor : [
-              'rgba(129, 201, 143, 1)',
-              'rgba(116, 177, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-            ],             
-            data: [15, 10, 50, 25],
-            borderColor: [
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-               'rgba(116, 119, 191, 1)',
-            ],
-            borderWidth: 1
-        }],
-        labels: ['Cars', 'Motorcycles', 'Bycicles', 'Buses'],  
-    },
-
-    options: {
-
-     responsive:true,
-      maintainAspectRatio: true,
-      aspectRatio: 2,
-      legend: {
-          position: 'bottom',
-        },
-
-        scales: {
-            xAxes: [{
-                gridLines: {
-                  display: false,
-                  drawBorder: false
-                },
-                 ticks: {
-                  display: false
-
-                }
-            }],
-            yAxes: [{
-               gridLines: {
-                  display: false,
-                  drawBorder: false
-                },
-                ticks: {
-                  display: false
-
-                }
-            }]
-        }
-    }
-});*/
+    
 
 }
 
@@ -262,7 +202,7 @@ let myChart = new Chart(ctx, {
 
         options: {
           responsive:true,
-          maintainAspectRatio: false,
+          maintainAspectRatio: true,
           aspectRatio: 2,
                 legend: {
                 display: false
