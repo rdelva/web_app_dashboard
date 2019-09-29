@@ -26,7 +26,8 @@ $(bell).click(function (){
 
 
 
-function timeNav(){
+
+const timeNav = () => {
   //default link is on Weekly
   const weekly = document.querySelector('#Weekly'); 
   weekly.classList.add('selected');
@@ -46,9 +47,10 @@ function timeNav(){
     }
   });
 
-}// end of timeNav()
+}// end of timeNav
 
-function hourlyTraffic(){
+
+const hourlyTraffic = () => {
 
 let ctx = document.getElementById('hourlyChart').getContext('2d');
 let myChart = new Chart(ctx, {
@@ -112,7 +114,8 @@ let myChart = new Chart(ctx, {
 }// end of hourlyTraffic
 
 
-function monthlyTraffic(){
+
+const monthlyTraffic = () => {
 
     let  ctx = document.getElementById('monthlyChart');
 
@@ -184,7 +187,8 @@ let myChart = new Chart(ctx, {
 }
 
 
-function dailyTraffic2() {
+
+const dailyTraffic2 = () => {
 
 // javascript
     var ctx = document.getElementById('dailyChart');
@@ -257,7 +261,7 @@ var myChart = new Chart(ctx, {
 }
 
 
-function traffic(){
+const traffic = () => {
 	var ctx = document.getElementById('weeklyChart');
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -308,7 +312,8 @@ var myChart = new Chart(ctx, {
 }
 
 
-function dailyTraffic (){
+
+const dailyTraffic = () => {
 
 
 	var ctx = document.getElementById('dailyTraffic');
@@ -359,7 +364,8 @@ function dailyTraffic (){
 
 }
 
-function mobileUsers() {
+
+const mobileUsers = () => {
 	var ctx = document.getElementById('mobileChart');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
@@ -429,7 +435,9 @@ var myChart = new Chart(ctx, {
 
 
 
-function selectChart(){
+
+const selectChart = () => {
+
     const time = document.querySelector('.time ul');
         const hourlyChart = document.getElementById('hourlyChart');
         const monthlyChart = document.getElementById('monthlyChart');
@@ -492,7 +500,8 @@ function selectChart(){
 
 
 
-function supportsLocalStorage() {
+
+const supportsLocalStorage = () => {
   'use strict';
   try {
     return 'localStorage' in window && window['localStorage'] !== null; 
@@ -553,7 +562,8 @@ window.onload = function (){
 }// end of window onload
 
 
-function defaultSettings(){
+
+const defaultSettings = () => {
     let email = document.getElementById('email-notice');
   let publicSetting = document.getElementById('public-profile');
    email.checked = true;
@@ -563,7 +573,7 @@ function defaultSettings(){
 
 //Select the save button amd pushes value into local storage
 
-function saveSettings(){
+  const saveSettings = () => {
     
     const save = document.getElementById('save');
 
@@ -584,12 +594,13 @@ function saveSettings(){
 
     });
 
-}// end saveSettings();
+}// end saveSettings
 
 
 //Select the cancel removes value into local storage
 
-function removeSettings(){
+
+  const removeSettings = () => {
     
     const cancel = document.getElementById('cancel');
 
@@ -610,7 +621,7 @@ function removeSettings(){
 
     });
 
-}// end saveSettings();
+}// end saveSettings
 
      
 
@@ -619,8 +630,10 @@ function removeSettings(){
 
 
 
-//Checks if Username and Message was entered.
-function messageUsers(){
+//Checks if Username and Message was entered
+
+const messageUsers = () => {
+
 
  const messenger = document.getElementById('messenger');
 
