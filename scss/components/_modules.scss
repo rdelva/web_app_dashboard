@@ -153,16 +153,13 @@ section{
 
 		li {
 			padding:5px 10px;
+			margin: 5px 10px;
 			font-weight: bold;
 			color: $grey-black;
 
-			&:hover{			
-			background-color: $white;
-			border-radius: 10px;	
-			border: 1px solid $green;		
-			color: $grey-black;
-			}
+			
 		}		
+
 
 		
 	}
@@ -173,6 +170,7 @@ section{
 		color: $white;
 	}
 
+		cursor: pointer;		
 }
 
 .widget{

@@ -514,6 +514,9 @@ section {
   cursor: pointer;
 }
 
+.time {
+  cursor: pointer;
+}
 .time ul {
   display: flex;
   flex-direction: row;
@@ -524,13 +527,8 @@ section {
 }
 .time ul li {
   padding: 5px 10px;
+  margin: 5px 10px;
   font-weight: bold;
-  color: #676666;
-}
-.time ul li:hover {
-  background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid #81c98f;
   color: #676666;
 }
 .time .selected {
