@@ -207,8 +207,9 @@ var myChart = new Chart(ctx, {
                 'rgba(153, 102, 255, 0.2)',
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
+              
             ],             
-            data: [15, 10, 50, 25,20,30,1,60],
+            data: [15, 10, 50, 25,20,30,1],
             borderColor: [
               'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -217,6 +218,7 @@ var myChart = new Chart(ctx, {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
+
             ],
             borderWidth: 1
         }],
@@ -229,7 +231,7 @@ var myChart = new Chart(ctx, {
       maintainAspectRatio: true,
       aspectRatio: 2,
       legend: {
-          position: 'right',
+          position: 'top',
         },
 
         scales: {
