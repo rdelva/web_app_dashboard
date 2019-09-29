@@ -1,21 +1,20 @@
 
 //Navigation Menu
-const header = document.querySelector('header');
+
 const bell = document.querySelector('.bell');
 const badge = document.querySelector('.badge');
-const menu  = document.querySelector('nav ul');
-const close  = document.querySelector('.alert span:nth-child(2)');
-const alert = document.querySelector('.alert');
+const closeButton  = document.querySelector('.alert span:nth-child(2)');
+
 const notice = document.querySelector('#widget-notice div');
 
 
 
 
 
-$(close).click(function(){
+$(closeButton).click(function(){
  
-  const alert = document.querySelector('.alert');
-  $(alert).hide();
+  const alertMessage = document.querySelector('.alert');
+  $(alertMessage).hide();
 
 });
 
@@ -29,16 +28,16 @@ $(bell).click(function (){
 
 function timeNav(){
   //default link is on Weekly
-  weekly = document.querySelector('#Weekly'); 
+  const weekly = document.querySelector('#Weekly'); 
   weekly.classList.add('selected');
 
-  timeMenu = document.querySelector('.time ul');  
-  timeMenuList = timeMenu.getElementsByTagName('li');
+  const timeMenu = document.querySelector('.time ul');  
+  const timeMenuList = timeMenu.getElementsByTagName('li');
   
   timeMenu.addEventListener('click', function(e) {
     //removes the current link outside of the loop selects the new link you've chosen
     if(e.target.tagName == 'LI'){
-      for(i=0; i <= timeMenuList.length; i++){
+      for(let i = 0; i <= timeMenuList.length; i++){
         if(document.getElementsByTagName('LI')[i].className == 'selected'){
           timeMenuList[i].classList.remove('selected');          
         }
@@ -51,8 +50,8 @@ function timeNav(){
 
 function hourlyTraffic(){
 
-var ctx = document.getElementById('hourlyChart').getContext('2d');
-var myChart = new Chart(ctx, {
+let ctx = document.getElementById('hourlyChart').getContext('2d');
+let myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -115,10 +114,10 @@ var myChart = new Chart(ctx, {
 
 function monthlyTraffic(){
 
-    var ctx = document.getElementById('monthlyChart');
+    let  ctx = document.getElementById('monthlyChart');
 
 
-var myChart = new Chart(ctx, {
+let myChart = new Chart(ctx, {
     type: 'pie',
       data: {
            datasets: [{
@@ -188,45 +187,71 @@ var myChart = new Chart(ctx, {
 function dailyTraffic2() {
 
 // javascript
-var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
+    var ctx = document.getElementById('dailyChart');
 
-var svgWidth = 500, svgHeight = 300, barPadding = 5;
-var barWidth = svgWidth / dataset.length;
-var svg = d3.select('svg')
-    .attr("width", svgWidth)
-    .attr("height", svgHeight);
-    
-var barChart = svg.selectAll("rect")
-    .data(dataset)
-    .enter()
-    .append("rect")
-    .attr("y", function(d) {
-         return svgHeight - d 
-    })
-    .attr("height", function(d) { 
-        return d; 
-    })
-    .attr("width", barWidth - barPadding)
-    .attr("class", "bar")
-    .attr("transform", function (d, i) {
-        var translate = [barWidth * i, 0]; 
-        return "translate("+ translate +")";
-    });
 
-var text = svg.selectAll("text")
-    .data(dataset)
-    .enter()
-    .append("text")
-    .text(function(d) {
-        return d;
-    })
-    .attr("y", function(d, i) {
-        return svgHeight - d - 2;
-    })
-    .attr("x", function(d, i) {
-        return barWidth * i;
-    })
-    .attr("fill", "#A64C38");
+var myChart = new Chart(ctx, {
+    type: 'polarArea',
+      data: {
+           datasets: [{
+                    
+            backgroundColor : [
+             'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+            ],             
+            data: [15, 10, 50, 25,20,30,1,60],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+            ],
+            borderWidth: 1
+        }],
+        labels: ['North America', 'South America', 'Asia', 'Africa', 'Australia','Antartica', 'Europe'],  
+    },
+
+    options: {
+
+     responsive:true,
+      maintainAspectRatio: true,
+      aspectRatio: 2,
+      legend: {
+          position: 'right',
+        },
+
+        scales: {
+            xAxes: [{
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                 ticks: {
+                  display: false
+
+                }
+            }],
+            yAxes: [{
+               gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  display: false
+
+                }
+            }]
+        }
+    }
+});
 
 
 }
@@ -408,13 +433,13 @@ function selectChart(){
     const time = document.querySelector('.time ul');
         const hourlyChart = document.getElementById('hourlyChart');
         const monthlyChart = document.getElementById('monthlyChart');
-        const barchart = document.getElementById('bar-chart');
+        const dailyChart = document.getElementById('dailyChart');
         const weeklyChart = document.getElementById('weeklyChart');
 
   
 
 
-    const canvas = document.createElement('canvas');
+   
     
      hourlyChart.style.display = 'none';
                dailyChart.style.display = 'none';
@@ -424,7 +449,6 @@ function selectChart(){
 
 
     time.addEventListener('click', (e) => {
-          const cdisplay = document.getElementById('chart_display');
 
       if(e.target.tagName == 'LI') {
 
@@ -493,18 +517,15 @@ window.onload = function (){
 
 
      let emailSetting = localStorage.getItem('email');
-     console.log(emailSetting);
      let profileSetting = localStorage.getItem('profile');
-     console.log(profileSetting);
      let tzSetting = localStorage.getItem('timezone');
-     console.log(tzSetting);
-
+     
      if( emailSetting == null){
       email.checked =  true;      
      } else if ( emailSetting == 'true'){
        email.checked =  true;       
      } else {
-        email.checked = false
+        email.checked = false;
      }
 
 
@@ -513,7 +534,7 @@ window.onload = function (){
      } else if ( profileSetting == 'true'){
        publicSetting.checked =  true;       
      } else {
-        publicSetting.checked = false
+        publicSetting.checked = false;
      }
      
      
@@ -529,7 +550,7 @@ window.onload = function (){
 
 
   }
-}// end of window.onload()
+}// end of window onload
 
 
 function defaultSettings(){
@@ -627,9 +648,7 @@ function messageUsers(){
 
 
 
-saveSettings();
-removeSettings();
-messageUsers();
+
 timeNav();
 traffic();
 hourlyTraffic();
@@ -638,3 +657,6 @@ dailyTraffic2();
 monthlyTraffic();
 mobileUsers();
 selectChart();
+saveSettings();
+removeSettings();
+messageUsers();
